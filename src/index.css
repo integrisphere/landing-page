@@ -2,39 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* IntegriSphere Solutions Design System - Industrial AI & Asset Integrity
+All colors MUST be HSL for semantic token consistency.
 */
 
 @layer base {
   :root {
+    /* Brand Foundation - Industrial Tech Palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 220 20% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 20% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 20% 10%;
 
-    --primary: 222.2 47.4% 11.2%;
+    /* Primary - Deep Industrial Blue */
+    --primary: 220 35% 15%;
     --primary-foreground: 210 40% 98%;
+    --primary-glow: 220 60% 25%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Steel Gray */
+    --secondary: 210 15% 92%;
+    --secondary-foreground: 220 35% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - Soft Industrial */
+    --muted: 210 15% 96%;
+    --muted-foreground: 220 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - AI Cyan */
+    --accent: 190 85% 45%;
+    --accent-foreground: 220 35% 15%;
+    --accent-glow: 190 85% 55%;
+
+    /* Success - Engineering Green */
+    --success: 150 70% 35%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning - Industrial Orange */
+    --warning: 25 95% 55%;
+    --warning-foreground: 220 35% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 210 20% 90%;
+    --input: 210 20% 95%;
+    --ring: 190 85% 45%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 35% 15%), hsl(220 60% 25%));
+    --gradient-accent: linear-gradient(135deg, hsl(190 85% 45%), hsl(190 85% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 35% 15%) 0%, hsl(220 50% 20%) 50%, hsl(190 85% 45%) 100%);
+    --gradient-surface: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 15% 98%) 100%);
+
+    /* Shadows */
+    --shadow-subtle: 0 2px 4px hsl(220 35% 15% / 0.05);
+    --shadow-medium: 0 4px 12px hsl(220 35% 15% / 0.1);
+    --shadow-strong: 0 8px 32px hsl(220 35% 15% / 0.15);
+    --shadow-glow: 0 0 24px hsl(190 85% 45% / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 
     --radius: 0.5rem;
 

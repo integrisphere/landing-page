@@ -1,0 +1,236 @@
+import Layout from "@/components/Layout";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { 
+  Wrench, 
+  Gauge, 
+  Flame, 
+  Camera, 
+  Shield, 
+  Brain, 
+  CheckCircle,
+  ArrowRight,
+  Zap,
+  BarChart3,
+  Eye
+} from "lucide-react";
+
+const Services = () => {
+  const services = [
+    {
+      id: "pipeline",
+      icon: Wrench,
+      title: "Pipeline Integrity Services",
+      description: "Comprehensive solutions for pipeline asset management and integrity assurance.",
+      features: [
+        "Leak Detection Systems with AI pattern recognition",
+        "Smart Pigging Programs with predictive analytics",
+        "Cathodic Protection Optimization using AI fine-tuning",
+        "Corrosion Assessments with hotspot identification",
+        "Chemical Injection Programs with real-time optimization"
+      ],
+      aiIntegration: "Our AI continuously analyzes inline inspection data, corrosion probe readings, and SCADA inputs to predict areas of concern months in advance.",
+      benefits: ["50% reduction in unnecessary inspections", "30% chemical cost savings", "Real-time leak detection"]
+    },
+    {
+      id: "pressure",
+      icon: Gauge,
+      title: "Pressure Equipment & Vessel Inspection",
+      description: "National Board, API certified inspection programs for critical pressure equipment.",
+      features: [
+        "API 510, 570, 653 Certified Inspections",
+        "Risk-Based Inspection (RBI) Programs",
+        "Fitness for Service (FFS) Assessments",
+        "Root Cause & Failure Analysis",
+        "Regulatory Compliance Management"
+      ],
+      aiIntegration: "Historical reports and photos are analyzed with machine vision to detect wear patterns or damage growth over time, leading to proactive repairs.",
+      benefits: ["Extended asset life", "Avoided unplanned shutdowns", "Millions saved in repair costs"]
+    },
+    {
+      id: "boiler",
+      icon: Flame,
+      title: "Boiler and Heat Recovery Systems",
+      description: "Advanced analysis and optimization for boiler systems and heat recovery equipment.",
+      features: [
+        "Boiler Feed Water System Analysis",
+        "HRSG Inspections with drone technology",
+        "Discoloration and Component Damage Trending",
+        "Chemical Treatment Optimization",
+        "Heat Exchanger Performance Monitoring"
+      ],
+      aiIntegration: "Real-time chemical data is continuously analyzed by machine learning models to predict scaling trends and optimize cleaning schedules.",
+      benefits: ["Extended equipment life", "Boosted efficiency", "Dramatically reduced fuel consumption"]
+    },
+    {
+      id: "drone",
+      icon: Camera,
+      title: "Drone Inspections & CUI Detection",
+      description: "Advanced aerial inspections and corrosion under insulation detection services.",
+      features: [
+        "Structural Drone Inspections for elevated equipment",
+        "CUI Detection using infrared and thermal imaging",
+        "Leak Detection Surveys (up to 400 km per flight)",
+        "Real-time GPS coordinate reporting",
+        "Ultra-high-resolution documentation"
+      ],
+      aiIntegration: "Each drone image is analyzed in real-time by our system to detect minute changes in heat signatures and surface textures.",
+      benefits: ["Reduced safety risks", "Cost-effective surveys", "Immediate leak detection"]
+    },
+    {
+      id: "corrosion",
+      icon: Shield,
+      title: "Advanced Corrosion Management",
+      description: "Comprehensive corrosion assessment and mitigation planning services.",
+      features: [
+        "Internal and External Corrosion Assessments",
+        "Customized Corrosion Monitoring Programs",
+        "SCADA Integration for real-time monitoring",
+        "Mitigation Strategy Development",
+        "Chemical Inhibitor Optimization"
+      ],
+      aiIntegration: "AI-assisted evaluations determine the most effective mix of coatings, chemical inhibitors, and operational changes.",
+      benefits: ["Prevented leaks", "Optimized maintenance", "Extended asset life"]
+    }
+  ];
+
+  return (
+    <Layout>
+      {/* Hero Section */}
+      <section className="py-20 bg-gradient-hero text-primary-foreground">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            AI-Enhanced Asset Integrity Services
+          </h1>
+          <p className="text-xl mb-8 max-w-3xl mx-auto text-primary-foreground/90">
+            Every service enhanced with custom AI solutions for superior decision-making, 
+            cost reduction, and enhanced safety
+          </p>
+          <Button variant="premium" size="lg" asChild>
+            <Link to="/contact">
+              Request Service Quote
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="space-y-20">
+            {services.map((service, index) => (
+              <div key={service.id} id={service.id} className="scroll-mt-20">
+                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+                  <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                    <div className="flex items-center space-x-4">
+                      <div className="bg-accent/10 p-4 rounded-lg">
+                        <service.icon className="h-10 w-10 text-accent" />
+                      </div>
+                      <h2 className="text-3xl font-bold text-foreground">{service.title}</h2>
+                    </div>
+                    
+                    <p className="text-lg text-muted-foreground">{service.description}</p>
+                    
+                    <div className="space-y-4">
+                      <h3 className="text-xl font-semibold text-foreground">Key Features:</h3>
+                      <ul className="space-y-3">
+                        {service.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-start space-x-3">
+                            <CheckCircle className="h-5 w-5 text-success mt-0.5 flex-shrink-0" />
+                            <span className="text-foreground">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="bg-accent/5 border border-accent/20 rounded-lg p-6">
+                      <div className="flex items-center space-x-2 mb-3">
+                        <Brain className="h-5 w-5 text-accent" />
+                        <span className="text-lg font-semibold text-accent">AI Integration</span>
+                      </div>
+                      <p className="text-foreground mb-4">{service.aiIntegration}</p>
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        {service.benefits.map((benefit, idx) => (
+                          <div key={idx} className="text-center p-3 bg-success/10 rounded-lg">
+                            <div className="text-sm font-medium text-success">{benefit}</div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
+                    <div className="bg-gradient-surface rounded-lg p-8 shadow-strong">
+                      <div className="space-y-6">
+                        <div className="text-center">
+                          <service.icon className="h-16 w-16 text-accent mx-auto mb-4" />
+                          <h3 className="text-2xl font-bold text-foreground mb-2">Service Highlights</h3>
+                        </div>
+                        
+                        <div className="grid grid-cols-2 gap-4">
+                          <div className="text-center p-4 bg-card rounded-lg border border-border">
+                            <Eye className="h-8 w-8 text-accent mx-auto mb-2" />
+                            <div className="text-sm font-medium text-foreground">Real-time</div>
+                            <div className="text-xs text-muted-foreground">Monitoring</div>
+                          </div>
+                          <div className="text-center p-4 bg-card rounded-lg border border-border">
+                            <BarChart3 className="h-8 w-8 text-accent mx-auto mb-2" />
+                            <div className="text-sm font-medium text-foreground">Predictive</div>
+                            <div className="text-xs text-muted-foreground">Analytics</div>
+                          </div>
+                          <div className="text-center p-4 bg-card rounded-lg border border-border">
+                            <Zap className="h-8 w-8 text-accent mx-auto mb-2" />
+                            <div className="text-sm font-medium text-foreground">Automated</div>
+                            <div className="text-xs text-muted-foreground">Optimization</div>
+                          </div>
+                          <div className="text-center p-4 bg-card rounded-lg border border-border">
+                            <Shield className="h-8 w-8 text-accent mx-auto mb-2" />
+                            <div className="text-sm font-medium text-foreground">Enhanced</div>
+                            <div className="text-xs text-muted-foreground">Safety</div>
+                          </div>
+                        </div>
+                        
+                        <Button variant="outline" className="w-full" asChild>
+                          <Link to={`/contact?service=${service.id}`}>
+                            Get Service Details
+                            <ArrowRight className="ml-2 h-4 w-4" />
+                          </Link>
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            Ready to Optimize Your Asset Integrity?
+          </h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-primary-foreground/90">
+            Our AI-enhanced services have helped clients save millions while improving safety and efficiency.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="premium" size="lg" asChild>
+              <Link to="/contact">
+                Request Consultation
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
+              <Link to="/case-studies">View Case Studies</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default Services;
