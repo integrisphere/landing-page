@@ -14,6 +14,7 @@ import {
   BarChart3,
   Eye
 } from "lucide-react";
+import servicesHero from "@/assets/services-hero.jpg";
 
 const Services = () => {
   const services = [
@@ -97,21 +98,40 @@ const Services = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            AI-Enhanced Asset Integrity Services
-          </h1>
-          <p className="text-xl mb-8 max-w-3xl mx-auto text-primary-foreground/90">
-            Every service enhanced with custom AI solutions for superior decision-making, 
-            cost reduction, and enhanced safety
-          </p>
-          <Button variant="premium" size="lg" asChild>
-            <Link to="/contact">
-              Request Service Quote
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0">
+          <img 
+            src={servicesHero} 
+            alt="AI-powered industrial control systems" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/60"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="max-w-4xl text-primary-foreground text-center">
+            <div className="inline-block mb-6">
+              <span className="px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-medium backdrop-blur-sm">
+                AI-Enhanced Services • Proven Results
+              </span>
+            </div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+              AI-Enhanced Asset Integrity
+              <span className="block text-accent">Services</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed mb-8">
+              Every service enhanced with custom AI solutions for superior decision-making, 
+              cost reduction, and enhanced safety across global operations.
+            </p>
+            <Button variant="premium" size="lg" className="text-lg px-8 py-6" asChild>
+              <Link to="/contact">
+                Request Service Quote
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 

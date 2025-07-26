@@ -14,6 +14,7 @@ import {
   Shield,
   Clock
 } from "lucide-react";
+import industriesHero from "@/assets/industries-hero.jpg";
 
 const Industries = () => {
   const industries = [
@@ -154,15 +155,40 @@ const Industries = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Industries We Serve
-          </h1>
-          <p className="text-xl mb-8 max-w-3xl mx-auto text-primary-foreground/90">
-            Delivering specialized asset integrity solutions across critical industries worldwide, 
-            with custom-built AI pipelines for each operational environment.
-          </p>
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0">
+          <img 
+            src={industriesHero} 
+            alt="Global industrial facilities" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/50"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="max-w-4xl text-primary-foreground text-center">
+            <div className="inline-block mb-6">
+              <span className="px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-medium backdrop-blur-sm">
+                Global Reach • Industry Expertise
+              </span>
+            </div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+              Industries We
+              <span className="block text-accent">Serve</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed mb-8">
+              Delivering specialized asset integrity solutions across critical industries worldwide, 
+              with custom-built AI pipelines for each operational environment.
+            </p>
+            <Button variant="premium" size="lg" className="text-lg px-8 py-6" asChild>
+              <Link to="/contact">
+                Get Industry Solution
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 

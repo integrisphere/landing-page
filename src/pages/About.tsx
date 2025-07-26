@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Globe, Users, Target, Heart, TrendingUp, ArrowRight } from "lucide-react";
 import inspectionTeam from "@/assets/inspection-team.jpg";
+import aboutHero from "@/assets/about-hero.jpg";
 
 const About = () => {
   const values = [
@@ -43,17 +44,39 @@ const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-surface">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0">
+          <img 
+            src={aboutHero} 
+            alt="IntegriSphere engineering team" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/40"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="max-w-4xl text-primary-foreground">
+            <div className="inline-block mb-6">
+              <span className="px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-medium backdrop-blur-sm">
+                Founded in Indonesia • Serving Globally
+              </span>
+            </div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
               Engineering Excellence Meets
               <span className="block text-accent">AI Innovation</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl leading-relaxed mb-8">
               Founded in Indonesia, we've quickly expanded to international markets by providing 
               forward-thinking solutions in asset integrity that traditional inspections couldn't deliver.
             </p>
+            <Button variant="premium" size="lg" className="text-lg px-8 py-6" asChild>
+              <Link to="/contact">
+                Get to Know Us
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

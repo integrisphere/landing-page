@@ -13,6 +13,7 @@ import {
   CheckCircle,
   Gauge
 } from "lucide-react";
+import technologyHero from "@/assets/technology-hero.jpg";
 
 const Technology = () => {
   const aiSuite = [
@@ -87,22 +88,40 @@ const Technology = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Revolutionizing Asset Integrity
-            <span className="block text-accent">with AI-Driven Solutions</span>
-          </h1>
-          <p className="text-xl mb-8 max-w-3xl mx-auto text-primary-foreground/90">
-            Our proprietary AI technologies transform traditional asset management into 
-            predictive, proactive, and profitable operations.
-          </p>
-          <Button variant="premium" size="lg" asChild>
-            <Link to="/contact">
-              Explore AI Implementation
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0">
+          <img 
+            src={technologyHero} 
+            alt="Advanced AI technology laboratory" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/75 to-primary/50"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="max-w-4xl text-primary-foreground text-center">
+            <div className="inline-block mb-6">
+              <span className="px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-medium backdrop-blur-sm">
+                Proprietary AI Technology • Industry Leading
+              </span>
+            </div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+              Revolutionizing Asset Integrity
+              <span className="block text-accent">with AI-Driven Solutions</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed mb-8">
+              Our proprietary AI technologies transform traditional asset management into 
+              predictive, proactive, and profitable operations.
+            </p>
+            <Button variant="premium" size="lg" className="text-lg px-8 py-6" asChild>
+              <Link to="/contact">
+                Explore AI Implementation
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 

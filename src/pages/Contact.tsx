@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Link } from "react-router-dom";
 import { 
   MapPin, 
   Phone, 
@@ -10,8 +11,10 @@ import {
   Clock,
   Globe,
   Linkedin,
-  Youtube
+  Youtube,
+  ArrowRight
 } from "lucide-react";
+import contactHero from "@/assets/contact-hero.jpg";
 
 const Contact = () => {
   const offices = [
@@ -63,21 +66,46 @@ const Contact = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-surface">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-            Get in Touch
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to transform your asset integrity management? Contact our experts 
-            to discuss your specific needs and discover how our AI-driven solutions 
-            can optimize your operations.
-          </p>
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0">
+          <img 
+            src={contactHero} 
+            alt="IntegriSphere global offices" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/75 to-primary/60"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="max-w-4xl text-primary-foreground text-center">
+            <div className="inline-block mb-6">
+              <span className="px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-medium backdrop-blur-sm">
+                Global Support • Expert Consultation
+              </span>
+            </div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+              Get in
+              <span className="block text-accent">Touch</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed mb-8">
+              Ready to transform your asset integrity management? Contact our experts 
+              to discuss your specific needs and discover how our AI-driven solutions 
+              can optimize your operations.
+            </p>
+            <Button variant="premium" size="lg" className="text-lg px-8 py-6" asChild>
+              <Link to="#contact-form">
+                Start Conversation
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-20 bg-background">
+      <section id="contact-form" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
