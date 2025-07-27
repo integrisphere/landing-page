@@ -1,42 +1,100 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { CheckCircle, BarChart3, Cog, Eye, ArrowRight } from "lucide-react";
+import { 
+  Search, 
+  Settings, 
+  Brain, 
+  BarChart3, 
+  RefreshCw,
+  ArrowRight,
+  CheckCircle,
+  TrendingUp,
+  DollarSign,
+  Shield,
+  Leaf,
+  Target
+} from "lucide-react";
 import aiMonitoring from "@/assets/ai-monitoring.jpg";
 
 const ApproachSection = () => {
   const steps = [
     {
-      icon: Eye,
+      icon: Search,
       title: "Comprehensive Gap Analysis",
       description: "Rigorous evaluation of your current integrity management system against industry best practices and regulatory standards.",
-      highlights: ["Identify missing systems", "Benchmark against global frameworks", "Highlight over-engineering areas"]
+      highlights: [
+        "Identify missing systems or processes hindering optimal performance",
+        "Benchmark existing protocols against globally recognized frameworks (API 1160, ASME B31.8, CSA Z662)",
+        "Highlight over-engineering or redundant measures for efficient resource allocation"
+      ]
     },
     {
-      icon: Cog,
+      icon: Settings,
       title: "System Integration & Optimization",
-      description: "Holistic optimization focusing on how multiple systems interact to address single issues efficiently.",
-      highlights: ["Integrated system analysis", "Resource allocation optimization", "Cost reduction strategies"]
+      description: "Holistic optimization focusing on how different systems interact when addressing single issues like internal corrosion.",
+      highlights: [
+        "Integrated analysis of coatings, inline pigging, chemical injection, material selection, and process control",
+        "Optimize resource allocation while maintaining corrosion control",
+        "Reduce costs, minimize environmental impact, ensure fit-for-purpose solutions"
+      ]
+    },
+    {
+      icon: Brain,
+      title: "Advanced Tools for Enhanced Understanding",
+      description: "Leverage cutting-edge tools and methodologies for efficiency, effectiveness, and fit-for-purpose solutions.",
+      highlights: [
+        "ER Probes, Coupon Testing, Smart Pigs with Advanced Sensors",
+        "Digital Twin Technology, Machine Learning Models, Geospatial Mapping",
+        "IoT-Enabled Sensors, Predictive Analytics Software"
+      ]
     },
     {
       icon: BarChart3,
-      title: "Advanced Tools & Analytics",
-      description: "Cutting-edge technologies and methodologies for enhanced understanding and efficiency.",
-      highlights: ["Digital twin technology", "Machine learning models", "Predictive analytics software"]
+      title: "Data-Driven Decision Making",
+      description: "Methodology rooted in data-driven decisions, ensuring every action is backed by reliable information.",
+      highlights: [
+        "Real-time data collection using ER probes, coupons, and IoT sensors",
+        "Software integration providing unified view of pipeline integrity",
+        "Scenario modeling using digital twins and simulation tools"
+      ]
     },
     {
-      icon: CheckCircle,
-      title: "Data-Driven Decision Making",
-      description: "Every action backed by reliable information from real-time data collection and analysis.",
-      highlights: ["Real-time monitoring", "Software integration", "Scenario modeling"]
+      icon: RefreshCw,
+      title: "Continuous Improvement Framework",
+      description: "Pipeline integrity management requires ongoing refinement through performance audits and adaptive strategies.",
+      highlights: [
+        "Regular performance audits ensuring alignment with evolving standards",
+        "Feedback loops incorporating lessons learned from past incidents",
+        "Dynamic strategy adjustments based on new technologies and operational demands"
+      ]
     }
   ];
 
   const benefits = [
-    "Cost Efficiency: Eliminate redundant measures and optimize resource utilization",
-    "Enhanced Safety: Maintain compliance while proactively addressing risks",
-    "Environmental Responsibility: Reduce chemical usage through smart integration",
-    "Operational Excellence: Improve pipeline reliability and maximize asset value",
-    "Future-Proof Solutions: Stay ahead with state-of-the-art technologies"
+    {
+      icon: DollarSign,
+      title: "Cost Efficiency",
+      description: "Eliminate redundant measures and optimize resource utilization",
+      metric: "Up to 50% savings"
+    },
+    {
+      icon: Shield,
+      title: "Enhanced Safety",
+      description: "Maintain compliance while proactively addressing potential risks",
+      metric: "Zero incidents"
+    },
+    {
+      icon: Leaf,
+      title: "Environmental Responsibility",
+      description: "Reduce chemical usage and energy consumption through smart integration",
+      metric: "30% reduction"
+    },
+    {
+      icon: Target,
+      title: "Operational Excellence",
+      description: "Improve overall pipeline reliability and uptime, maximizing asset value",
+      metric: "99.9% uptime"
+    }
   ];
 
   return (
@@ -92,14 +150,18 @@ const ApproachSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-3xl font-bold mb-6">Key Benefits of Our Approach</h3>
-              <ul className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
-                    <span className="text-primary-foreground/90">{benefit}</span>
-                  </li>
+                  <div key={index} className="bg-primary-foreground/10 rounded-lg p-4 backdrop-blur-sm">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <benefit.icon className="h-6 w-6 text-accent" />
+                      <h4 className="font-semibold text-lg">{benefit.title}</h4>
+                    </div>
+                    <p className="text-primary-foreground/80 text-sm mb-2">{benefit.description}</p>
+                    <div className="text-accent font-bold">{benefit.metric}</div>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
             <div className="text-center lg:text-right">
               <div className="space-y-6">

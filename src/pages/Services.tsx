@@ -24,13 +24,13 @@ const Services = () => {
       title: "Pipeline Integrity Services",
       description: "Comprehensive solutions for pipeline asset management and integrity assurance.",
       features: [
-        "Leak Detection Systems with AI pattern recognition",
-        "Smart Pigging Programs with predictive analytics",
-        "Cathodic Protection Optimization using AI fine-tuning",
-        "Corrosion Assessments with hotspot identification",
-        "Chemical Injection Programs with real-time optimization"
+        "Leak Detection Systems: Scalable systems including pressure-based detection, flow imbalance monitors, acoustic sensors, and thermal imaging drones with AI pattern recognition",
+        "Smart Pigging Programs: Inline Inspection (ILI) using magnetic flux leakage (MFL) or ultrasonic pigs to assess internal wall loss with predictive analytics",
+        "Cathodic Protection Optimization: Audit and optimize CP systems for buried pipelines with AI fine-tuning based on soil resistivity",
+        "Corrosion Assessments: Corrosion mapping, hotspot identification, and correlation with AI-detected trends in humidity, temperature, and fluid composition",
+        "Chemical Injection Programs: Batch or continuous inhibitor dosing with AI adjusting rates to keep corrosion below 0.05 mm/year"
       ],
-      aiIntegration: "Our AI continuously analyzes inline inspection data, corrosion probe readings, and SCADA inputs to predict areas of concern months in advance.",
+      aiIntegration: "Our AI continuously analyzes inline inspection data, corrosion probe readings, and SCADA inputs to predict areas of concern months in advance, reducing false alarms and enabling real-time leak detection.",
       benefits: ["50% reduction in unnecessary inspections", "30% chemical cost savings", "Real-time leak detection"]
     },
     {
@@ -39,13 +39,13 @@ const Services = () => {
       title: "Pressure Equipment & Vessel Inspection",
       description: "National Board, API certified inspection programs for critical pressure equipment.",
       features: [
-        "API 510, 570, 653 Certified Inspections",
-        "Risk-Based Inspection (RBI) Programs",
-        "Fitness for Service (FFS) Assessments",
-        "Root Cause & Failure Analysis",
-        "Regulatory Compliance Management"
+        "National Board, API 510, 570, 653 Inspections: Full certified inspection programs for boilers, pressure vessels, piping, and tanks",
+        "Risk-Based Inspection (RBI) Programs: Custom RBI plans including inspection execution, reporting, and regulatory compliance",
+        "Fitness for Service (FFS) Assessments: Custom FFS evaluations to extend asset life and avoid unplanned shutdowns",
+        "Root Cause & Failure Analysis: Investigating equipment failures using metallurgical testing, fracture analysis, and AI-assisted degradation pattern matching",
+        "Regulatory Compliance Management: Ensuring adherence to all relevant industry standards and regulations"
       ],
-      aiIntegration: "Historical reports and photos are analyzed with machine vision to detect wear patterns or damage growth over time, leading to proactive repairs.",
+      aiIntegration: "Historical reports and photos are analyzed with machine vision to detect wear patterns or damage growth over time, leading to proactive repairs and optimized shutdown intervals.",
       benefits: ["Extended asset life", "Avoided unplanned shutdowns", "Millions saved in repair costs"]
     },
     {
@@ -54,13 +54,13 @@ const Services = () => {
       title: "Boiler and Heat Recovery Systems",
       description: "Advanced analysis and optimization for boiler systems and heat recovery equipment.",
       features: [
-        "Boiler Feed Water System Analysis",
-        "HRSG Inspections with drone technology",
-        "Discoloration and Component Damage Trending",
-        "Chemical Treatment Optimization",
-        "Heat Exchanger Performance Monitoring"
+        "Boiler Feed Water System Analysis: AI analyzes water chemistry, scaling trends, and past inspection findings to fine-tune chemical dosing",
+        "HRSG Inspections: On-site inspections using drones, Visual and NDT to assess fouling, cracks, and discoloration",
+        "Discoloration and Component Damage Trending: Computer vision detects surface anomalies while AI correlates with water treatment data",
+        "Chemical Treatment Optimization: Prevent overheating, scaling, or corrosion through AI-optimized chemical programs",
+        "Equipment Coverage: Boilers, Heat Exchangers, Cooling Towers, Evaporators, RO Systems, Deaerators, and Cogeneration Units"
       ],
-      aiIntegration: "Real-time chemical data is continuously analyzed by machine learning models to predict scaling trends and optimize cleaning schedules.",
+      aiIntegration: "Real-time chemical data is continuously analyzed by machine learning models to predict scaling trends, optimize cleaning schedules, and proactively protect critical components—extending the life of HRSGs and boilers, boosting efficiency, and dramatically reducing fuel consumption.",
       benefits: ["Extended equipment life", "Boosted efficiency", "Dramatically reduced fuel consumption"]
     },
     {
@@ -69,13 +69,13 @@ const Services = () => {
       title: "Drone Inspections & CUI Detection",
       description: "Advanced aerial inspections and corrosion under insulation detection services.",
       features: [
-        "Structural Drone Inspections for elevated equipment",
-        "CUI Detection using infrared and thermal imaging",
-        "Leak Detection Surveys (up to 400 km per flight)",
-        "Real-time GPS coordinate reporting",
-        "Ultra-high-resolution documentation"
+        "Structural Drone Inspections: High-resolution drones for elevated flare stacks, bridges, tanks, and pipe racks reducing risk and inspection time",
+        "CUI Detection: Infrared and thermal imaging detect moisture under insulation before corrosion spreads with AI anomaly pattern recognition",
+        "Leak Detection Surveys: Regulatory-compliant surveys replacing costly helicopter operations, up to 400 km per flight with ultra-high-resolution cameras",
+        "Real-time GPS Reporting: Leaks automatically detected, geolocated, and reported with exact GPS coordinates and real-time notifications",
+        "Onboard AI Processing: Each drone equipped with onboard leak recognition software for immediate analysis and alerts"
       ],
-      aiIntegration: "Each drone image is analyzed in real-time by our system to detect minute changes in heat signatures and surface textures.",
+      aiIntegration: "Each drone image is analyzed in real-time by our system to detect minute changes in heat signatures and surface textures indicative of corrosion, with AI highlighting regions with anomaly patterns not visible to the human eye.",
       benefits: ["Reduced safety risks", "Cost-effective surveys", "Immediate leak detection"]
     },
     {
@@ -84,13 +84,13 @@ const Services = () => {
       title: "Advanced Corrosion Management",
       description: "Comprehensive corrosion assessment and mitigation planning services.",
       features: [
-        "Internal and External Corrosion Assessments",
-        "Customized Corrosion Monitoring Programs",
-        "SCADA Integration for real-time monitoring",
-        "Mitigation Strategy Development",
-        "Chemical Inhibitor Optimization"
+        "Internal and External Assessments: Using UT, MFL, ER probes, and coupons to assess wall loss and pitting with comprehensive analysis",
+        "Customized Corrosion Monitoring Programs: Tailored programs for specific fluid type, pressure, and temperature with SCADA integration",
+        "SCADA Integration: Real-time monitoring and data collection for continuous assessment and immediate alerts",
+        "Mitigation Strategy Development: AI-assisted evaluations determine optimal mix of coatings, chemical inhibitors, and operational changes",
+        "Advanced Analytics: SLMs evaluate data from different corrosion methods to recommend pigging frequency and inhibitor adjustments"
       ],
-      aiIntegration: "AI-assisted evaluations determine the most effective mix of coatings, chemical inhibitors, and operational changes.",
+      aiIntegration: "SLMs evaluate data from different corrosion methods to recommend adjustments in inhibitors or pigging frequency, saving cost and preventing leaks through intelligent analysis of multiple data streams.",
       benefits: ["Prevented leaks", "Optimized maintenance", "Extended asset life"]
     }
   ];
