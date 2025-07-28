@@ -36,10 +36,10 @@ const CaseStudies = () => {
         timeframe: "6 months"
       },
       metrics: [
-        "300K annual savings through reduced chemical overdosing",
-        "15% improvement in boiler efficiency",
-        "50% reduction in unplanned cleaning cycles",
-        "98% accuracy in scaling predictions"
+        "Up to $300K annual savings through reduced chemical overdosing",
+        "Up to 15% improvement in boiler efficiency",
+        "Up to 50% reduction in unplanned cleaning cycles",
+        "Up to 98% accuracy in scaling predictions"
       ]
     },
     {
@@ -63,10 +63,10 @@ const CaseStudies = () => {
         timeframe: "12 months"
       },
       metrics: [
-        "1.2M+ in avoided environmental cleanup costs",
-        "85% reduction in leak incidents",
-        "90% improvement in early detection",
-        "Zero regulatory violations in 18 months"
+        "Up to $1.2M+ in avoided environmental cleanup costs",
+        "Up to 85% reduction in leak incidents",
+        "Up to 90% improvement in early detection",
+        "Zero regulatory violations achieved"
       ]
     },
     {
@@ -90,9 +90,9 @@ const CaseStudies = () => {
         timeframe: "18 months"
       },
       metrics: [
-        "2.8M saved by extending vessel life 5 years",
-        "40% reduction in inspection frequency",
-        "60% decrease in maintenance costs",
+        "Up to $2.8M saved by extending vessel life",
+        "Up to 40% reduction in inspection frequency",
+        "Up to 60% decrease in maintenance costs",
         "100% regulatory compliance maintained"
       ]
     }

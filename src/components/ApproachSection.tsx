@@ -87,7 +87,7 @@ const ApproachSection = () => {
       icon: Leaf,
       title: "Environmental Responsibility",
       description: "Reduce chemical usage and energy consumption through smart integration",
-      metric: "30% reduction"
+      metric: "Up to 30% reduction"
     },
     {
       icon: Target,
@@ -166,11 +166,11 @@ const ApproachSection = () => {
             <div className="text-center lg:text-right">
               <div className="space-y-6">
                 <div className="bg-primary-foreground/10 rounded-lg p-6 backdrop-blur-sm">
-                  <div className="text-4xl font-bold text-accent mb-2">50%</div>
+                  <div className="text-4xl font-bold text-accent mb-2">Up to 50%</div>
                   <div className="text-primary-foreground/80">Cost Reduction in Unnecessary Inspections</div>
                 </div>
                 <div className="bg-primary-foreground/10 rounded-lg p-6 backdrop-blur-sm">
-                  <div className="text-4xl font-bold text-accent mb-2">30%</div>
+                  <div className="text-4xl font-bold text-accent mb-2">Up to 30%</div>
                   <div className="text-primary-foreground/80">Chemical Cost Savings</div>
                 </div>
                 <Button variant="premium" size="lg" asChild>

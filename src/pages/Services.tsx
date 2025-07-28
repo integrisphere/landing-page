@@ -31,7 +31,7 @@ const Services = () => {
         "Chemical Injection Programs: Batch or continuous inhibitor dosing with AI adjusting rates to keep corrosion below 0.05 mm/year"
       ],
       aiIntegration: "Our AI continuously analyzes inline inspection data, corrosion probe readings, and SCADA inputs to predict areas of concern months in advance, reducing false alarms and enabling real-time leak detection.",
-      benefits: ["50% reduction in unnecessary inspections", "30% chemical cost savings", "Real-time leak detection"]
+      benefits: ["Up to 50% reduction in unnecessary inspections", "Up to 30% chemical cost savings", "Real-time leak detection"]
     },
     {
       id: "pressure",
