@@ -25,8 +25,12 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">I</span>
+            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center p-1">
+              <img 
+                src="/lovable-uploads/2dff6047-b7b9-4af9-be62-57a5f9c22f5c.png" 
+                alt="Integrity Pulse Logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold text-foreground">IntegriSphere</span>
