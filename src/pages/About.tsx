@@ -120,26 +120,53 @@ const About = () => {
       {/* Our Story */}
       <section className="py-20 bg-gradient-surface">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-foreground text-center mb-12">Our Story</h2>
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl font-bold text-foreground text-center mb-12">IntegriSphere Solutions: Forged from Engineering Heritage, Powered by Agentic AI</h2>
             <div className="bg-card border border-border rounded-lg p-8 shadow-medium">
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                IntegriSphere Solutions was born from a critical observation: traditional inspection 
-                methods were reactive, not predictive. While industries invested heavily in compliance 
-                and safety measures, they still faced unexpected failures, costly shutdowns, and 
-                inefficient resource allocation.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Founded in Indonesia, our company recognized the need for a paradigm shift. We saw 
-                that the future of asset integrity lay not just in meeting regulatory requirements, 
-                but in leveraging artificial intelligence to predict, prevent, and optimize.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Today, we've expanded across four continents, developing proprietary AI solutions 
-                that integrate visual, operational, and chemical data to provide unprecedented insights 
-                into asset health. Our approach has saved clients millions in avoided failures while 
-                reducing operational costs by up to 50%.
-              </p>
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  Our foundation is built upon over 25 years of engineering excellence in Western Canada. The heritage company at our core spent decades serving the region's most critical industries—oil and gas, utilities, and Petrochemical. We pioneered rigorous asset integrity programs, mastering proactive risk management, precision inspections, and operational efficiencies. Our reputation was defined by uncompromising attention to detail, deep regulatory expertise, and a relentless drive to extend asset lifespans while optimizing costs.
+                </p>
+                <p>
+                  Recognizing the future demanded a quantum leap, not incremental improvements, we evolved. We didn't just adopt AI; we pioneered <em>Agentic Integrity Management</em>. By fusing our engineering DNA with a visionary AI leader, IntegriSphere was born. We have moved beyond simple prediction by embedding decades of field-tested knowledge into the core of our <strong>advanced reasoning models</strong>. Our platform operates as a dynamic digital expert that doesn't just process data—it autonomously sees, reasons, and strategizes.
+                </p>
+                <p>
+                  Today, IntegriSphere Solutions represents the true convergence of engineering discipline and transformative AI. We deliver <em>prescriptive integrity management</em> that turns complex data not just into foresight, but into optimal, validated strategy. Our proprietary <em>agentic AI</em> embeds 25 years of operational wisdom into its core reasoning engine, creating an autonomous, closed-loop system that continuously learns and optimizes your assets.
+                </p>
+              </div>
+              
+              <div className="mt-12">
+                <h3 className="text-2xl font-bold text-foreground mb-6">The IntegriSphere Advantage:</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-4">
+                    <div className="bg-accent/5 border border-accent/20 rounded-lg p-6">
+                      <h4 className="font-semibold text-foreground mb-2">Strategic Prescription:</h4>
+                      <p className="text-muted-foreground">Move beyond mere prediction. Our AI reasons through countless scenarios to prescribe the optimal, risk-assessed action plan.</p>
+                    </div>
+                    <div className="bg-accent/5 border border-accent/20 rounded-lg p-6">
+                      <h4 className="font-semibold text-foreground mb-2">Eradicate Surprises:</h4>
+                      <p className="text-muted-foreground">Identify complex, hidden threats 6-18 months before failure, giving you an unprecedented strategic window.</p>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="bg-accent/5 border border-accent/20 rounded-lg p-6">
+                      <h4 className="font-semibold text-foreground mb-2">Radical Efficiency:</h4>
+                      <p className="text-muted-foreground">Slash operational costs by up to 50% through intelligent, AI-prescribed workflows that eliminate waste.</p>
+                    </div>
+                    <div className="bg-accent/5 border border-accent/20 rounded-lg p-6">
+                      <h4 className="font-semibold text-foreground mb-2">Automated, Ironclad Compliance:</h4>
+                      <p className="text-muted-foreground">Generate flawless, auditable integrity trails that automatically exceed the most stringent regulatory standards.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-8 text-center">
+                <p className="text-lg text-muted-foreground">
+                  From the oil sands, SAGD, upstream, Midstream, Downstream, and power generation of Alberta and Saskatchewan to BC's Chemical networks, our solutions are engineered for Western Canada's extremes—and scaled globally. We honor the precision of our engineering roots while harnessing the strategic power of agentic AI to redefine what's possible.
+                </p>
+                <p className="text-xl font-bold text-accent mt-4"><em>This is Integrity. Evolved.</em></p>
+              </div>
             </div>
           </div>
         </div>

@@ -92,6 +92,28 @@ const Services = () => {
       ],
       aiIntegration: "SLMs evaluate data from different corrosion methods to recommend adjustments in inhibitors or pigging frequency, saving cost and preventing leaks through intelligent analysis of multiple data streams.",
       benefits: ["Prevented leaks", "Optimized maintenance", "Extended asset life"]
+    },
+    {
+      id: "engineering",
+      icon: Brain,
+      title: "Engineering Services",
+      description: "Comprehensive engineering solutions with AI-enhanced analysis and optimization capabilities.",
+      features: [
+        "Process Hazard Analysis (PHA) & HAZOP Studies: Facilitated risk assessments identifying deviations, consequences, and safeguards with AI analyzing past reports to flag recurring failure modes",
+        "HAZOP Study Development & Facilitation: Engineering new HAZOP studies for greenfield projects with certified leaders defining nodes and building safeguard protocols for full PHA compliance (ISO 17776, IEC 61882)",
+        "Corrosion Control Documents (CCD) & Degradation Manuals: Facility-specific corrosion management strategies mapping materials, process fluids, and mitigation protocols",
+        "Pressure Safety Valve (PSV) Engineering: Sizing, selection, installation validation, and relief scenario modeling per ASME/API 520/521 with dynamic simulation tools",
+        "P&ID Validation & Digital Twin Audits: Field-verified P&ID accuracy checks and discrepancy resolution with computer vision comparing field photos/drawings",
+        "Root Cause Analysis (RCA) & Failure Investigation: Forensic engineering combining metallurgy, vibration analysis, and operational forensics",
+        "Design Review & Specification Audits: Third-party verification of mechanical, process, and structural designs against client standards",
+        "Risk-Based Inspection (RBI) Program Development: Optimize inspection intervals using consequence/probability scoring with AI predicting probability shifts",
+        "Fitness-for-Service (FFS) Assessments: Extend asset life with API 579-compliant evaluations of damaged equipment",
+        "Management of Change (MOC) Engineering: Technical authorization workflow for process/equipment modifications",
+        "Reliability Centered Maintenance (RCM): Failure mode-driven maintenance planning for critical systems",
+        "Constructability & Operational Readiness Reviews: Build-phase intervention to eliminate commissioning delays"
+      ],
+      aiIntegration: "Our AI synthesizes decades of engineering decisions into actionable foresight: HAZOP Acceleration cuts study time by up to 60% with AI-generated deviation/consequence templates, Corrosion Forecasting reduces chemical costs up to 30% with predictive inhibitor dosing, Failure Prevention identifies up to 82% of PSV undersizing issues before commissioning, and Design Assurance eliminates costly rework with automated standards compliance checks.",
+      benefits: ["Up to 60% faster HAZOP studies", "Up to 30% chemical cost reduction", "Up to 82% failure prevention"]
     }
   ];
 

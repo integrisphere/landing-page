@@ -230,53 +230,49 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Global Offices */}
+      {/* Global Reach */}
       <section className="py-20 bg-gradient-surface">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-6">Global Offices</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              With offices across four continents, we're always close to your operations
+            <h2 className="text-4xl font-bold text-foreground mb-6">Reach Us Globally</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              With offices worldwide, we're positioned to serve your asset integrity needs locally.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {offices.map((office, index) => (
-              <div 
-                key={index}
-                className="bg-card border border-border rounded-lg p-6 shadow-medium hover:shadow-strong transition-all duration-300"
-              >
-                <div className="flex items-center space-x-3 mb-4">
-                  <MapPin className="h-6 w-6 text-accent" />
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground">
-                      {office.city}
-                      {office.primary && <span className="text-accent ml-2">(HQ)</span>}
-                    </h3>
-                    <p className="text-muted-foreground">{office.country}</p>
-                  </div>
+          
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-card rounded-lg p-8 shadow-medium border border-border text-center">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+                <div className="text-center">
+                  <MapPin className="h-8 w-8 text-accent mx-auto mb-2" />
+                  <h3 className="font-semibold text-foreground">Calgary</h3>
+                  <p className="text-sm text-muted-foreground">Canada</p>
                 </div>
-                
-                <div className="space-y-2 text-sm">
-                  <p className="text-muted-foreground">{office.address}</p>
-                  <p className="text-muted-foreground">{office.postal}</p>
-                  <div className="pt-2 space-y-1">
-                    <div className="flex items-center space-x-2">
-                      <Phone className="h-4 w-4 text-accent" />
-                      <span className="text-foreground">{office.phone}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Mail className="h-4 w-4 text-accent" />
-                      <span className="text-foreground">{office.email}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Globe className="h-4 w-4 text-accent" />
-                      <span className="text-foreground">{office.timezone}</span>
-                    </div>
-                  </div>
+                <div className="text-center">
+                  <MapPin className="h-8 w-8 text-accent mx-auto mb-2" />
+                  <h3 className="font-semibold text-foreground">Jakarta</h3>
+                  <p className="text-sm text-muted-foreground">Indonesia</p>
+                </div>
+                <div className="text-center">
+                  <MapPin className="h-8 w-8 text-accent mx-auto mb-2" />
+                  <h3 className="font-semibold text-foreground">Manila</h3>
+                  <p className="text-sm text-muted-foreground">Philippines</p>
+                </div>
+                <div className="text-center">
+                  <MapPin className="h-8 w-8 text-accent mx-auto mb-2" />
+                  <h3 className="font-semibold text-foreground">Nairobi</h3>
+                  <p className="text-sm text-muted-foreground">Kenya</p>
                 </div>
               </div>
-            ))}
+              
+              <div className="border-t border-border pt-6">
+                <div className="flex items-center justify-center space-x-2 mb-2">
+                  <Mail className="h-5 w-5 text-accent" />
+                  <span className="text-lg font-semibold text-foreground">Global Contact</span>
+                </div>
+                <p className="text-muted-foreground">contact@integrisphere.com</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
