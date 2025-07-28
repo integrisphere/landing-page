@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Linkedin, Youtube, Mail, Phone, MapPin } from "lucide-react";
-
+import logo from "../assets/logo-4x.png";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -34,25 +34,37 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-accent rounded-lg flex items-center justify-center">
-                <span className="text-primary font-bold text-xl">I</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold">IntegriSphere</span>
-                <span className="text-sm text-primary-foreground/80">Solutions</span>
-              </div>
+              <Link to="/" className="flex items-center">
+                <div className="h-12 w-auto">
+                  <img
+                    src={logo}
+                    alt="IntegriSphere Logo"
+                    className="h-full object-contain"
+                  />
+                </div>
+              </Link>
             </div>
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
-              Empowering Global Asset Integrity Through Engineering Excellence and AI-Driven Innovation.
+              Empowering Global Asset Integrity Through Engineering Excellence
+              and AI-Driven Innovation.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-primary-foreground/80 hover:text-accent transition-colors">
+              <a
+                href="#"
+                className="text-primary-foreground/80 hover:text-accent transition-colors"
+              >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-primary-foreground/80 hover:text-accent transition-colors">
+              <a
+                href="#"
+                className="text-primary-foreground/80 hover:text-accent transition-colors"
+              >
                 <Youtube className="h-5 w-5" />
               </a>
-              <a href="mailto:info@integrisphere.com" className="text-primary-foreground/80 hover:text-accent transition-colors">
+              <a
+                href="mailto:info@integrisphere.com"
+                className="text-primary-foreground/80 hover:text-accent transition-colors"
+              >
                 <Mail className="h-5 w-5" />
               </a>
             </div>
@@ -97,14 +109,21 @@ const Footer = () => {
             <h3 className="text-lg font-semibold">Global Offices</h3>
             <div className="space-y-3">
               {offices.map((office) => (
-                <div key={`${office.city}-${office.country}`} className="flex items-start space-x-2">
+                <div
+                  key={`${office.city}-${office.country}`}
+                  className="flex items-start space-x-2"
+                >
                   <MapPin className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
                   <div className="text-sm">
                     <div className="text-primary-foreground">
                       {office.city}
-                      {office.primary && <span className="text-accent ml-1">(HQ)</span>}
+                      {office.primary && (
+                        <span className="text-accent ml-1">(HQ)</span>
+                      )}
                     </div>
-                    <div className="text-primary-foreground/80">{office.country}</div>
+                    <div className="text-primary-foreground/80">
+                      {office.country}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -118,7 +137,10 @@ const Footer = () => {
               © {currentYear} IntegriSphere Solutions. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm text-primary-foreground/80">
-              <Link to="/privacy" className="hover:text-accent transition-colors">
+              <Link
+                to="/privacy"
+                className="hover:text-accent transition-colors"
+              >
                 Privacy Policy
               </Link>
               <Link to="/terms" className="hover:text-accent transition-colors">
