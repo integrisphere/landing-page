@@ -199,7 +199,7 @@ const Technology = () => {
       </section>
 
       {/* What Sets Us Apart */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-6">What Sets Us Apart</h2>
@@ -208,45 +208,61 @@ const Technology = () => {
             </p>
           </div>
 
-          <div className="space-y-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
             {differentiators.map((item, index) => (
               <div 
                 key={index}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}
+                className="group bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-8 shadow-soft hover:shadow-elegant transition-all duration-500 hover:-translate-y-2"
               >
-                <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-accent/10 p-4 rounded-lg">
-                      <item.icon className="h-10 w-10 text-accent" />
-                    </div>
-                    <h3 className="text-3xl font-bold text-foreground">{item.title}</h3>
+                {/* Icon and Title */}
+                <div className="text-center mb-6">
+                  <div className="bg-gradient-primary p-6 rounded-full w-fit mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <item.icon className="h-12 w-12 text-white" />
                   </div>
-                  <p className="text-lg text-muted-foreground">{item.description}</p>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    {item.highlights.map((highlight, idx) => (
-                      <div key={idx} className="bg-accent/5 border border-accent/20 rounded-lg p-4 text-center">
-                        <div className="text-sm font-medium text-accent">{highlight}</div>
-                      </div>
-                    ))}
-                  </div>
+                  <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                    {item.title}
+                  </h3>
                 </div>
-                
-                <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-                  <div className="bg-primary rounded-lg p-8 text-primary-foreground">
-                    <div className="text-center space-y-6">
-                      <item.icon className="h-16 w-16 text-accent mx-auto" />
-                      <div className="space-y-4">
-                        <div className="text-4xl font-bold text-accent">99.7%</div>
-                        <div className="text-lg">AI Accuracy Rate</div>
-                        <div className="text-sm text-primary-foreground/80">
-                          Across all monitoring and prediction systems
-                        </div>
-                      </div>
+
+                {/* Description */}
+                <p className="text-muted-foreground text-center mb-6 leading-relaxed">
+                  {item.description}
+                </p>
+
+                {/* Highlights */}
+                <div className="space-y-3">
+                  {item.highlights.map((highlight, idx) => (
+                    <div 
+                      key={idx} 
+                      className="bg-accent/10 border border-accent/20 rounded-lg p-3 text-center group-hover:bg-accent/20 transition-colors duration-300"
+                    >
+                      <div className="text-sm font-semibold text-accent">{highlight}</div>
                     </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Stats Section */}
+          <div className="bg-gradient-primary rounded-2xl p-12 text-center text-white shadow-glow">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="space-y-2">
+                <div className="text-4xl font-bold text-accent">99.7%</div>
+                <div className="text-lg font-medium">AI Accuracy Rate</div>
+                <div className="text-sm text-white/80">Across all monitoring systems</div>
+              </div>
+              <div className="space-y-2">
+                <div className="text-4xl font-bold text-accent">85%</div>
+                <div className="text-lg font-medium">Cost Reduction</div>
+                <div className="text-sm text-white/80">Average client savings</div>
+              </div>
+              <div className="space-y-2">
+                <div className="text-4xl font-bold text-accent">24/7</div>
+                <div className="text-lg font-medium">Monitoring</div>
+                <div className="text-sm text-white/80">Continuous asset surveillance</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
