@@ -234,9 +234,9 @@ const Technology = () => {
                   {item.highlights.map((highlight, idx) => (
                     <div 
                       key={idx} 
-                      className="bg-accent/10 border border-accent/20 rounded-lg p-3 text-center group-hover:bg-accent/20 transition-colors duration-300"
+                      className="bg-primary/10 border border-primary/20 rounded-lg p-3 text-center group-hover:bg-primary/20 transition-colors duration-300"
                     >
-                      <div className="text-sm font-semibold text-accent">{highlight}</div>
+                      <div className="text-sm font-semibold text-primary">{highlight}</div>
                     </div>
                   ))}
                 </div>
