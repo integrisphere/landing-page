@@ -14,7 +14,7 @@ const About = () => {
     },
     {
       icon: Target,
-      title: "Commitment",
+      title: "Commitment", 
       description: "Dedicated to delivering exceptional results and exceeding client expectations through unwavering dedication."
     },
     {
@@ -60,7 +60,7 @@ const About = () => {
           <div className="max-w-4xl text-primary-foreground">
             <div className="inline-block mb-6">
               <span className="px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-medium backdrop-blur-sm">
-                Founded in Indonesia • Serving Globally
+                Engineering Heritage • Global Innovation
               </span>
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
@@ -68,8 +68,8 @@ const About = () => {
               <span className="block text-accent">AI Innovation</span>
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl leading-relaxed mb-8">
-              Founded in Indonesia, we've quickly expanded to international markets by providing 
-              forward-thinking solutions in asset integrity that traditional inspections couldn't deliver.
+              Built on 25+ years of Western Canadian engineering excellence, we've evolved into a global leader 
+              by providing forward-thinking solutions in asset integrity that traditional inspections couldn't deliver.
             </p>
             <Button variant="premium" size="lg" className="text-lg px-8 py-6" asChild>
               <Link to="/contact">
