@@ -43,7 +43,10 @@ const Contact = () => {
   // Auto-focus first input when contact form section becomes visible
   useEffect(() => {
     const handleHashChange = () => {
-      if (window.location.hash === '#contact-form' && firstNameInputRef.current) {
+      if (
+        window.location.hash === "#contact-form" &&
+        firstNameInputRef.current
+      ) {
         setTimeout(() => {
           firstNameInputRef.current?.focus();
         }, 100);
@@ -52,14 +55,31 @@ const Contact = () => {
 
     // Check on mount
     handleHashChange();
-    
+
     // Listen for hash changes
-    window.addEventListener('hashchange', handleHashChange);
-    
+    window.addEventListener("hashchange", handleHashChange);
+
     return () => {
-      window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener("hashchange", handleHashChange);
     };
   }, []);
+
+  // Handle "Start Conversation" button click
+  const handleStartConversation = (e) => {
+    e.preventDefault();
+    // Scroll to contact form
+    const contactForm = document.getElementById("contact-form");
+    if (contactForm) {
+      contactForm.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+      // Focus the first input after scrolling
+      setTimeout(() => {
+        firstNameInputRef.current?.focus();
+      }, 500);
+    }
+  };
 
   const offices = [
     {
@@ -190,12 +210,10 @@ const Contact = () => {
               variant="premium"
               size="lg"
               className="text-lg px-8 py-6"
-              asChild
+              onClick={handleStartConversation}
             >
-              <Link to="#contact-form">
-                Start Conversation
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+              Start Conversation
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
         </div>
@@ -241,7 +259,7 @@ const Contact = () => {
                       placeholder="John"
                       value={formData.firstName}
                       onChange={handleInputChange}
-                      className="border border-input"
+                      className="border-2 border-border focus:border-accent transition-colors duration-200"
                       required
                     />
                   </div>
@@ -252,7 +270,7 @@ const Contact = () => {
                       placeholder="Doe"
                       value={formData.lastName}
                       onChange={handleInputChange}
-                      className="border border-input"
+                      className="border-2 border-border focus:border-accent transition-colors duration-200"
                       required
                     />
                   </div>
@@ -266,7 +284,7 @@ const Contact = () => {
                     placeholder="john.doe@company.com"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="border border-input"
+                    className="border-2 border-border focus:border-accent transition-colors duration-200"
                     required
                   />
                 </div>
@@ -278,7 +296,7 @@ const Contact = () => {
                     placeholder="+1 (555) 123-4567"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="border border-input"
+                    className="border-2 border-border focus:border-accent transition-colors duration-200"
                   />
                 </div>
 
@@ -289,7 +307,7 @@ const Contact = () => {
                     placeholder="Your Company Name"
                     value={formData.company}
                     onChange={handleInputChange}
-                    className="border border-input"
+                    className="border-2 border-border focus:border-accent transition-colors duration-200"
                   />
                 </div>
 
@@ -297,7 +315,7 @@ const Contact = () => {
                   <Label htmlFor="service">Service Interest</Label>
                   <select
                     id="service"
-                    className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground"
+                    className="w-full px-3 py-2 border-2 border-border rounded-md bg-background text-foreground focus:border-accent focus:outline-none transition-colors duration-200"
                     value={formData.service}
                     onChange={handleInputChange}
                   >
@@ -331,7 +349,7 @@ const Contact = () => {
                     rows={5}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="border border-input"
+                    className="border-2 border-border focus:border-accent transition-colors duration-200"
                     required
                   />
                 </div>
