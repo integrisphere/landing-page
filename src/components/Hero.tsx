@@ -28,73 +28,70 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-surface animate-fade-in">
+      {/* Subtle background overlay */}
       <div className="absolute inset-0">
-        <img 
-          src={heroImage} 
-          alt="Industrial AI Infrastructure" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-muted to-secondary/30"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary))_0%,transparent_50%)] opacity-5"></div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20">
-        <div className="max-w-4xl">
-          <div className="space-y-6 text-primary-foreground">
+      <div className="relative z-10 container mx-auto px-6 py-32">
+        <div className="max-w-5xl mx-auto text-center">
+          <div className="space-y-8 animate-slide-up">
             <div className="inline-block">
-              <span className="px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-medium backdrop-blur-sm">
+              <span className="px-6 py-3 bg-secondary border border-border text-muted-foreground rounded-full text-sm font-medium shadow-subtle">
                 AI by AI - Asset Integrity by Artificial Intelligence
               </span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-light leading-tight text-foreground">
               Empowering Global
-              <span className="block text-accent">Asset Integrity</span>
-              Through Engineering Excellence
+              <span className="block font-normal text-primary mt-2">Asset Integrity</span>
+              <span className="block text-3xl md:text-4xl lg:text-5xl font-light text-muted-foreground mt-4">
+                Through Engineering Excellence
+              </span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light">
               From pipelines to boilers, we deliver world-class inspection and engineering solutions 
               powered by custom AI technologies—ensuring asset safety, regulatory compliance, 
               and cost-efficiency worldwide.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-6">
-              <Button variant="premium" size="lg" className="text-lg px-8 py-6" asChild>
+            <div className="flex flex-col sm:flex-row gap-4 pt-8 justify-center">
+              <Button variant="default" size="lg" className="text-base px-8 py-6 shadow-medium hover:shadow-strong transition-all duration-500" asChild>
                 <Link to="/services">
                   Explore Our Services
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button variant="secondary" size="lg" className="text-lg px-8 py-6" asChild>
+              <Button variant="secondary" size="lg" className="text-base px-8 py-6 shadow-subtle hover:shadow-medium transition-all duration-500" asChild>
                 <Link to="/contact">Contact Us Today</Link>
               </Button>
             </div>
           </div>
 
           {/* Key Features */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-24">
             {features.map((feature, index) => (
               <div 
                 key={index}
-                className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-lg p-6 text-primary-foreground hover:bg-primary-foreground/15 transition-all duration-300"
+                className="group bg-card border border-border rounded-xl p-8 shadow-subtle hover:shadow-medium transition-all duration-500 animate-fade-in"
+                style={{ animationDelay: `${index * 150}ms` }}
               >
-                <feature.icon className="h-8 w-8 text-accent mb-3" />
-                <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
-                <p className="text-primary-foreground/80 text-sm">{feature.description}</p>
+                <feature.icon className="h-10 w-10 text-primary mb-4 group-hover:text-accent transition-colors duration-300" />
+                <h3 className="font-medium text-lg mb-3 text-card-foreground">{feature.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed font-light">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary-foreground/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-accent rounded-full mt-2 animate-pulse"></div>
-        </div>
+      {/* Subtle scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-float">
+        <div className="w-1 h-16 bg-gradient-to-b from-border to-transparent rounded-full"></div>
       </div>
     </section>
   );

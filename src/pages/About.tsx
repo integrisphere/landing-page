@@ -44,34 +44,30 @@ const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        {/* Background */}
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-gradient-surface animate-fade-in">
+        {/* Subtle background overlay */}
         <div className="absolute inset-0">
-          <img 
-            src={aboutHero} 
-            alt="IntegriSphere engineering team" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-background via-muted to-secondary/30"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,hsl(var(--primary))_0%,transparent_50%)] opacity-10"></div>
         </div>
 
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <div className="max-w-4xl text-primary-foreground">
-            <div className="inline-block mb-6">
-              <span className="px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-medium backdrop-blur-sm">
+        <div className="relative z-10 container mx-auto px-6 py-32">
+          <div className="max-w-5xl text-center mx-auto">
+            <div className="inline-block mb-8">
+              <span className="px-6 py-3 bg-secondary border border-border text-muted-foreground rounded-full text-sm font-medium shadow-subtle">
                 Engineering Heritage • Global Innovation
               </span>
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-light leading-tight mb-8 text-foreground">
               Engineering Excellence Meets
-              <span className="block text-accent">AI Innovation</span>
+              <span className="block font-normal text-primary mt-2">AI Innovation</span>
             </h1>
-            <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12 font-light">
               Built on 25+ years of Western Canadian engineering excellence, we've evolved into a global leader 
               by providing forward-thinking solutions in asset integrity that traditional inspections couldn't deliver.
             </p>
-            <Button variant="premium" size="lg" className="text-lg px-8 py-6" asChild>
+            <Button variant="default" size="lg" className="text-base px-10 py-6 shadow-medium hover:shadow-strong transition-all duration-500" asChild>
               <Link to="/contact">
                 Get to Know Us
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -82,22 +78,22 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="bg-card border border-border rounded-lg p-8 shadow-medium">
-                <h2 className="text-3xl font-bold text-foreground mb-4">Our Mission</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+      <section className="py-24 bg-background animate-fade-in">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-10">
+              <div className="bg-card border border-border rounded-xl p-10 shadow-subtle">
+                <h2 className="text-3xl font-light text-foreground mb-6">Our Mission</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed font-light">
                   To create measurable value for our clients' risk management strategies by delivering 
                   innovative, independent, and sustainable integrity solutions that exceed expectations 
                   and drive operational excellence.
                 </p>
               </div>
               
-              <div className="bg-primary rounded-lg p-8 text-primary-foreground">
-                <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
-                <p className="text-lg text-primary-foreground/90 leading-relaxed">
+              <div className="bg-secondary border border-border rounded-xl p-10 shadow-subtle">
+                <h2 className="text-3xl font-light text-foreground mb-6">Our Vision</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed font-light">
                   To be the global leader in asset integrity services, driving efficiency, safety, 
                   and sustainability through engineering excellence and AI-driven insights that 
                   transform how industries manage their critical assets.
@@ -106,12 +102,13 @@ const About = () => {
             </div>
 
             <div className="relative">
-              <img 
-                src={inspectionTeam} 
-                alt="IntegriSphere inspection team" 
-                className="w-full rounded-lg shadow-strong"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-lg"></div>
+              <div className="bg-gradient-to-br from-secondary to-muted p-8 rounded-2xl">
+                <img 
+                  src={inspectionTeam} 
+                  alt="IntegriSphere inspection team" 
+                  className="w-full rounded-xl shadow-medium"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -173,11 +170,11 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-6">Our Core Values</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+      <section className="py-24 bg-background animate-fade-in">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl font-light text-foreground mb-6">Our Core Values</h2>
+            <p className="text-xl font-light text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               These principles guide every decision we make and every solution we deliver
             </p>
           </div>
@@ -186,13 +183,14 @@ const About = () => {
             {values.map((value, index) => (
               <div 
                 key={index}
-                className="bg-card border border-border rounded-lg p-6 shadow-medium hover:shadow-strong transition-all duration-300 text-center"
+                className="bg-card border border-border rounded-xl p-8 shadow-subtle hover:shadow-medium transition-all duration-500 text-center group animate-slide-up"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="bg-accent/10 p-4 rounded-full w-fit mx-auto mb-4">
-                  <value.icon className="h-8 w-8 text-accent" />
+                <div className="bg-primary/10 p-4 rounded-xl w-fit mx-auto mb-6 group-hover:bg-primary/20 transition-colors duration-300">
+                  <value.icon className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">{value.title}</h3>
-                <p className="text-muted-foreground">{value.description}</p>
+                <h3 className="text-xl font-medium text-foreground mb-4">{value.title}</h3>
+                <p className="text-muted-foreground font-light leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>

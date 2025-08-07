@@ -120,34 +120,30 @@ const Services = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        {/* Background */}
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-gradient-surface animate-fade-in">
+        {/* Subtle background overlay */}
         <div className="absolute inset-0">
-          <img 
-            src={servicesHero} 
-            alt="AI-powered industrial control systems" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-background via-muted to-secondary/30"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,hsl(var(--primary))_0%,transparent_50%)] opacity-10"></div>
         </div>
 
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <div className="max-w-4xl text-primary-foreground text-center">
-            <div className="inline-block mb-6">
-              <span className="px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-medium backdrop-blur-sm">
+        <div className="relative z-10 container mx-auto px-6 py-32">
+          <div className="max-w-5xl text-center mx-auto">
+            <div className="inline-block mb-8">
+              <span className="px-6 py-3 bg-secondary border border-border text-muted-foreground rounded-full text-sm font-medium shadow-subtle">
                 AI-Enhanced Services • Proven Results
               </span>
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-light leading-tight mb-8 text-foreground">
               AI-Enhanced Asset Integrity
-              <span className="block text-accent">Services</span>
+              <span className="block font-normal text-primary mt-2">Services</span>
             </h1>
-            <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12 font-light">
               Every service enhanced with custom AI solutions for superior decision-making, 
               cost reduction, and enhanced safety across global operations.
             </p>
-            <Button variant="premium" size="lg" className="text-lg px-8 py-6" asChild>
+            <Button variant="default" size="lg" className="text-base px-10 py-6 shadow-medium hover:shadow-strong transition-all duration-500" asChild>
               <Link to="/contact">
                 Request Service Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -158,43 +154,43 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="space-y-20">
+      <section className="py-24 bg-background animate-fade-in">
+        <div className="container mx-auto px-6">
+          <div className="space-y-24">
             {services.map((service, index) => (
               <div key={service.id} id={service.id} className="scroll-mt-20">
-                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-                  <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                    <div className="flex items-center space-x-4">
-                      <div className="bg-accent/10 p-4 rounded-lg">
-                        <service.icon className="h-10 w-10 text-accent" />
+                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+                  <div className={`space-y-8 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                    <div className="flex items-center space-x-6">
+                      <div className="bg-primary/10 p-5 rounded-xl">
+                        <service.icon className="h-12 w-12 text-primary" />
                       </div>
-                      <h2 className="text-3xl font-bold text-foreground">{service.title}</h2>
+                      <h2 className="text-3xl font-light text-foreground">{service.title}</h2>
                     </div>
                     
-                    <p className="text-lg text-muted-foreground">{service.description}</p>
+                    <p className="text-lg text-muted-foreground font-light leading-relaxed">{service.description}</p>
                     
-                    <div className="space-y-4">
-                      <h3 className="text-xl font-semibold text-foreground">Key Features:</h3>
-                      <ul className="space-y-3">
+                    <div className="space-y-6">
+                      <h3 className="text-xl font-medium text-foreground">Key Features:</h3>
+                      <ul className="space-y-4">
                         {service.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-start space-x-3">
-                            <CheckCircle className="h-5 w-5 text-success mt-0.5 flex-shrink-0" />
-                            <span className="text-foreground">{feature}</span>
+                          <li key={idx} className="flex items-start space-x-4">
+                            <CheckCircle className="h-5 w-5 text-success mt-1 flex-shrink-0" />
+                            <span className="text-foreground font-light leading-relaxed">{feature}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
-                    <div className="bg-accent/5 border border-accent/20 rounded-lg p-6">
-                      <div className="flex items-center space-x-2 mb-3">
-                        <Brain className="h-5 w-5 text-accent" />
-                        <span className="text-lg font-semibold text-accent">AI Integration</span>
+                    <div className="bg-accent/5 border border-accent/20 rounded-xl p-8">
+                      <div className="flex items-center space-x-3 mb-4">
+                        <Brain className="h-6 w-6 text-accent" />
+                        <span className="text-lg font-medium text-accent">AI Integration</span>
                       </div>
-                      <p className="text-foreground mb-4">{service.aiIntegration}</p>
+                      <p className="text-foreground font-light leading-relaxed mb-6">{service.aiIntegration}</p>
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         {service.benefits.map((benefit, idx) => (
-                          <div key={idx} className="text-center p-3 bg-success/10 rounded-lg">
+                          <div key={idx} className="text-center p-4 bg-success/10 border border-success/20 rounded-lg">
                             <div className="text-sm font-medium text-success">{benefit}</div>
                           </div>
                         ))}
@@ -203,37 +199,37 @@ const Services = () => {
                   </div>
 
                   <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-                    <div className="bg-gradient-surface rounded-lg p-8 shadow-strong">
-                      <div className="space-y-6">
+                    <div className="bg-card border border-border rounded-xl p-10 shadow-subtle">
+                      <div className="space-y-8">
                         <div className="text-center">
-                          <service.icon className="h-16 w-16 text-accent mx-auto mb-4" />
-                          <h3 className="text-2xl font-bold text-foreground mb-2">Service Highlights</h3>
+                          <service.icon className="h-20 w-20 text-primary mx-auto mb-6" />
+                          <h3 className="text-2xl font-light text-foreground mb-2">Service Highlights</h3>
                         </div>
                         
                         <div className="grid grid-cols-2 gap-4">
-                          <div className="text-center p-4 bg-card rounded-lg border border-border">
-                            <Eye className="h-8 w-8 text-accent mx-auto mb-2" />
+                          <div className="text-center p-6 bg-secondary/50 border border-border rounded-xl hover:shadow-subtle transition-all duration-300">
+                            <Eye className="h-10 w-10 text-primary mx-auto mb-3" />
                             <div className="text-sm font-medium text-foreground">Real-time</div>
-                            <div className="text-xs text-muted-foreground">Monitoring</div>
+                            <div className="text-xs text-muted-foreground font-light">Monitoring</div>
                           </div>
-                          <div className="text-center p-4 bg-card rounded-lg border border-border">
-                            <BarChart3 className="h-8 w-8 text-accent mx-auto mb-2" />
+                          <div className="text-center p-6 bg-secondary/50 border border-border rounded-xl hover:shadow-subtle transition-all duration-300">
+                            <BarChart3 className="h-10 w-10 text-primary mx-auto mb-3" />
                             <div className="text-sm font-medium text-foreground">Predictive</div>
-                            <div className="text-xs text-muted-foreground">Analytics</div>
+                            <div className="text-xs text-muted-foreground font-light">Analytics</div>
                           </div>
-                          <div className="text-center p-4 bg-card rounded-lg border border-border">
-                            <Zap className="h-8 w-8 text-accent mx-auto mb-2" />
+                          <div className="text-center p-6 bg-secondary/50 border border-border rounded-xl hover:shadow-subtle transition-all duration-300">
+                            <Zap className="h-10 w-10 text-primary mx-auto mb-3" />
                             <div className="text-sm font-medium text-foreground">Automated</div>
-                            <div className="text-xs text-muted-foreground">Optimization</div>
+                            <div className="text-xs text-muted-foreground font-light">Optimization</div>
                           </div>
-                          <div className="text-center p-4 bg-card rounded-lg border border-border">
-                            <Shield className="h-8 w-8 text-accent mx-auto mb-2" />
+                          <div className="text-center p-6 bg-secondary/50 border border-border rounded-xl hover:shadow-subtle transition-all duration-300">
+                            <Shield className="h-10 w-10 text-primary mx-auto mb-3" />
                             <div className="text-sm font-medium text-foreground">Enhanced</div>
-                            <div className="text-xs text-muted-foreground">Safety</div>
+                            <div className="text-xs text-muted-foreground font-light">Safety</div>
                           </div>
                         </div>
                         
-                        <Button variant="outline" className="w-full" asChild>
+                        <Button variant="outline" className="w-full shadow-subtle hover:shadow-medium transition-all duration-300" asChild>
                           <Link to={`/contact?service=${service.id}`}>
                             Get Service Details
                             <ArrowRight className="ml-2 h-4 w-4" />

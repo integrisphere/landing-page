@@ -20,29 +20,12 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-card/98 backdrop-blur-md border-b border-border shadow-subtle">
+      <div className="container mx-auto px-6">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          {/* <Link to="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center p-1">
-              <img
-                src={logo}
-                alt="Integrity Pulse Logo"
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold text-foreground">
-                IntegriSphere
-              </span>
-              <span className="text-xs text-muted-foreground -mt-1">
-                Solutions
-              </span>
-            </div>
-          </Link> */}
-          <Link to="/" className="flex items-center">
-            <div className="h-12 w-auto">
+          <Link to="/" className="flex items-center group">
+            <div className="h-12 w-auto transition-transform duration-300 group-hover:scale-105">
               <img
                 src={logo}
                 alt="IntegriSphere Logo"
@@ -52,66 +35,67 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-10">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-accent",
-                  isActive(item.href) ? "text-accent" : "text-foreground"
+                  "text-sm font-light tracking-wide transition-all duration-300 hover:text-primary relative group",
+                  isActive(item.href) ? "text-primary" : "text-muted-foreground"
                 )}
               >
                 {item.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
           </nav>
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="outline" size="sm" asChild>
+            <Button variant="outline" size="sm" className="font-light" asChild>
               <Link to="/contact">Get Quote</Link>
             </Button>
-            <Button variant="hero" size="sm" asChild>
+            <Button variant="default" size="sm" className="font-light shadow-medium hover:shadow-strong transition-all duration-300" asChild>
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2"
+            className="lg:hidden p-2 rounded-lg hover:bg-secondary transition-colors duration-200"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X className="h-6 w-6 text-muted-foreground" />
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu className="h-6 w-6 text-muted-foreground" />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-border">
-            <nav className="py-4 space-y-2">
+          <div className="lg:hidden border-t border-border animate-fade-in">
+            <nav className="py-6 space-y-1">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
                   className={cn(
-                    "block px-4 py-2 text-sm font-medium transition-colors hover:text-accent",
-                    isActive(item.href) ? "text-accent" : "text-foreground"
+                    "block px-4 py-3 text-sm font-light tracking-wide transition-all duration-200 hover:text-primary hover:bg-secondary/50 rounded-lg",
+                    isActive(item.href) ? "text-primary bg-secondary" : "text-muted-foreground"
                   )}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="px-4 pt-4 space-y-2">
-                <Button variant="outline" size="sm" className="w-full" asChild>
+              <div className="px-4 pt-6 space-y-3">
+                <Button variant="outline" size="sm" className="w-full font-light" asChild>
                   <Link to="/contact">Get Quote</Link>
                 </Button>
-                <Button variant="hero" size="sm" className="w-full" asChild>
+                <Button variant="default" size="sm" className="w-full font-light" asChild>
                   <Link to="/contact">Contact Us</Link>
                 </Button>
               </div>

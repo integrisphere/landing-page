@@ -2,70 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-/* IntegriSphere Solutions Design System - Industrial AI & Asset Integrity
-All colors MUST be HSL for semantic token consistency.
+/* IntegriSphere Solutions Design System - Classic Engineering Theme
+Subtle colors, easy on the eyes, off-white backgrounds
 */
 
 @layer base {
   :root {
-    /* Brand Foundation - Industrial Tech Palette */
-    --background: 0 0% 100%;
-    --foreground: 220 20% 10%;
+    /* Foundation - Off-white & Muted Tones */
+    --background: 45 20% 97%;
+    --foreground: 210 15% 25%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 20% 10%;
+    --card: 45 25% 98%;
+    --card-foreground: 210 15% 25%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 10%;
+    --popover: 45 25% 98%;
+    --popover-foreground: 210 15% 25%;
 
-    /* Primary - Lighter Industrial Blue */
-    --primary: 220 45% 35%;
-    --primary-foreground: 210 40% 98%;
-    --primary-glow: 220 60% 45%;
+    /* Primary - Muted Navy Blue */
+    --primary: 220 35% 45%;
+    --primary-foreground: 45 25% 98%;
+    --primary-glow: 220 40% 55%;
 
-    /* Secondary - Lighter Steel Gray */
-    --secondary: 210 15% 95%;
-    --secondary-foreground: 220 35% 25%;
+    /* Secondary - Warm Beige */
+    --secondary: 45 15% 92%;
+    --secondary-foreground: 210 20% 35%;
 
-    /* Muted - Lighter Industrial */
-    --muted: 210 15% 97%;
-    --muted-foreground: 220 15% 55%;
+    /* Muted - Subtle Gray-Beige */
+    --muted: 45 10% 94%;
+    --muted-foreground: 210 12% 55%;
 
-    /* Accent - Brighter AI Cyan */
-    --accent: 190 85% 55%;
-    --accent-foreground: 220 35% 20%;
-    --accent-glow: 190 85% 65%;
+    /* Accent - Muted Teal */
+    --accent: 180 25% 55%;
+    --accent-foreground: 45 25% 98%;
+    --accent-glow: 180 30% 65%;
 
-    /* Success - Engineering Green */
-    --success: 150 70% 35%;
-    --success-foreground: 0 0% 100%;
+    /* Success - Soft Green */
+    --success: 145 25% 45%;
+    --success-foreground: 45 25% 98%;
 
-    /* Warning - Industrial Orange */
-    --warning: 25 95% 55%;
-    --warning-foreground: 220 35% 15%;
+    /* Warning - Muted Orange */
+    --warning: 35 35% 55%;
+    --warning-foreground: 45 25% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 355 45% 55%;
+    --destructive-foreground: 45 25% 98%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 95%;
-    --ring: 190 85% 45%;
+    --border: 45 15% 85%;
+    --input: 45 20% 90%;
+    --ring: 220 35% 45%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(220 45% 35%), hsl(220 60% 45%));
-    --gradient-accent: linear-gradient(135deg, hsl(190 85% 55%), hsl(190 85% 65%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 45% 35%) 0%, hsl(220 50% 40%) 50%, hsl(190 85% 55%) 100%);
-    --gradient-surface: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 15% 99%) 100%);
+    /* Gradients - Subtle & Elegant */
+    --gradient-primary: linear-gradient(135deg, hsl(220 35% 45%), hsl(220 40% 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(180 25% 55%), hsl(180 30% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 35% 45%) 0%, hsl(210 30% 50%) 50%, hsl(180 25% 55%) 100%);
+    --gradient-surface: linear-gradient(180deg, hsl(45 25% 98%) 0%, hsl(45 20% 96%) 100%);
 
-    /* Shadows */
-    --shadow-subtle: 0 2px 4px hsl(220 35% 15% / 0.05);
-    --shadow-medium: 0 4px 12px hsl(220 35% 15% / 0.1);
-    --shadow-strong: 0 8px 32px hsl(220 35% 15% / 0.15);
-    --shadow-glow: 0 0 24px hsl(190 85% 45% / 0.3);
+    /* Shadows - Soft & Subtle */
+    --shadow-subtle: 0 2px 8px hsl(210 15% 25% / 0.03);
+    --shadow-medium: 0 4px 16px hsl(210 15% 25% / 0.06);
+    --shadow-strong: 0 8px 32px hsl(210 15% 25% / 0.1);
+    --shadow-glow: 0 0 20px hsl(220 35% 45% / 0.15);
 
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-spring: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    /* Animations - Smooth & Elegant */
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-spring: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-fade: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 
     --radius: 0.5rem;
 
@@ -131,6 +132,42 @@ All colors MUST be HSL for semantic token consistency.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-light;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  /* Page transitions */
+  .page-enter {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .page-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: var(--transition-fade);
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
   }
 }

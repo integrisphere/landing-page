@@ -50,13 +50,13 @@ const ServicesPreview = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+    <section className="py-24 bg-background animate-fade-in">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6">
             Comprehensive Asset Integrity Services
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl font-light text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Every service enhanced with custom AI solutions for superior decision-making, 
             cost reduction, and enhanced safety
           </p>
@@ -66,43 +66,44 @@ const ServicesPreview = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-card border border-border rounded-lg p-6 shadow-medium hover:shadow-strong transition-all duration-300 group"
+              className="bg-card border border-border rounded-xl p-8 shadow-subtle hover:shadow-medium transition-all duration-500 group animate-slide-up"
+              style={{ animationDelay: `${index * 150}ms` }}
             >
               <div className="mb-6">
-                <div className="bg-accent/10 p-3 rounded-lg w-fit mb-4 group-hover:bg-accent/20 transition-colors">
-                  <service.icon className="h-8 w-8 text-accent" />
+                <div className="bg-primary/10 p-4 rounded-xl w-fit mb-4 group-hover:bg-primary/20 transition-colors duration-300">
+                  <service.icon className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">{service.title}</h3>
-                <p className="text-muted-foreground mb-4">{service.description}</p>
+                <h3 className="text-xl font-medium text-foreground mb-4">{service.title}</h3>
+                <p className="text-muted-foreground font-light mb-6 leading-relaxed">{service.description}</p>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-6">
                 <div>
-                  <h4 className="text-sm font-semibold text-foreground mb-2">Key Features:</h4>
-                  <ul className="space-y-1">
+                  <h4 className="text-sm font-medium text-foreground mb-3">Key Features:</h4>
+                  <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="text-sm text-muted-foreground flex items-center">
-                        <div className="w-1.5 h-1.5 bg-accent rounded-full mr-2"></div>
+                      <li key={idx} className="text-sm text-muted-foreground flex items-center font-light">
+                        <div className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0"></div>
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="bg-accent/5 border border-accent/20 rounded-lg p-4">
-                  <div className="flex items-center space-x-2 mb-2">
+                <div className="bg-accent/5 border border-accent/20 rounded-xl p-4">
+                  <div className="flex items-center space-x-2 mb-3">
                     <Brain className="h-4 w-4 text-accent" />
-                    <span className="text-sm font-semibold text-accent">AI Integration</span>
+                    <span className="text-sm font-medium text-accent">AI Integration</span>
                   </div>
-                  <p className="text-sm text-foreground">{service.aiFeature}</p>
+                  <p className="text-sm text-foreground font-light leading-relaxed">{service.aiFeature}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Button variant="hero" size="lg" asChild>
+        <div className="text-center mt-16">
+          <Button variant="default" size="lg" className="shadow-medium hover:shadow-strong transition-all duration-300" asChild>
             <Link to="/services">
               Explore All Services
               <ArrowRight className="ml-2 h-5 w-5" />
