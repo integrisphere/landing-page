@@ -119,131 +119,125 @@ const Services = () => {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-gradient-surface animate-fade-in">
-        {/* Subtle background overlay */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-background via-muted to-secondary/30"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,hsl(var(--primary))_0%,transparent_50%)] opacity-10"></div>
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 container mx-auto px-6 py-32">
-          <div className="max-w-5xl text-center mx-auto">
-            <div className="inline-block mb-8">
-              <span className="px-6 py-3 bg-secondary border border-border text-muted-foreground rounded-full text-sm font-medium shadow-subtle">
-                AI-Enhanced Services • Proven Results
-              </span>
+      <div className="animate-fade-in">
+        {/* Hero Section */}
+        <section className="py-24 bg-gradient-subtle">
+          <div className="container mx-auto px-6 text-center">
+            <div className="max-w-4xl mx-auto">
+              <div className="inline-block mb-6">
+                <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">
+                  AI-Enhanced Services • Proven Results
+                </span>
+              </div>
+              <h1 className="text-5xl md:text-6xl font-bold mb-8 text-foreground leading-tight">
+                AI-Enhanced Asset Integrity
+                <span className="block text-primary">Services</span>
+              </h1>
+              <p className="text-xl mb-10 max-w-3xl mx-auto text-muted-foreground leading-relaxed">
+                Every service enhanced with custom AI solutions for superior decision-making, 
+                cost reduction, and enhanced safety across global operations.
+              </p>
+              <Button variant="hero" size="lg" className="text-lg px-8 py-6" asChild>
+                <Link to="/contact">
+                  Request Service Quote
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-light leading-tight mb-8 text-foreground">
-              AI-Enhanced Asset Integrity
-              <span className="block font-normal text-primary mt-2">Services</span>
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12 font-light">
-              Every service enhanced with custom AI solutions for superior decision-making, 
-              cost reduction, and enhanced safety across global operations.
-            </p>
-            <Button variant="default" size="lg" className="text-base px-10 py-6 shadow-medium hover:shadow-strong transition-all duration-500" asChild>
-              <Link to="/contact">
-                Request Service Quote
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Services Grid */}
-      <section className="py-24 bg-background animate-fade-in">
-        <div className="container mx-auto px-6">
-          <div className="space-y-24">
-            {services.map((service, index) => (
-              <div key={service.id} id={service.id} className="scroll-mt-20">
-                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-                  <div className={`space-y-8 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                    <div className="flex items-center space-x-6">
-                      <div className="bg-primary/10 p-5 rounded-xl">
-                        <service.icon className="h-12 w-12 text-primary" />
-                      </div>
-                      <h2 className="text-3xl font-light text-foreground">{service.title}</h2>
-                    </div>
-                    
-                    <p className="text-lg text-muted-foreground font-light leading-relaxed">{service.description}</p>
-                    
-                    <div className="space-y-6">
-                      <h3 className="text-xl font-medium text-foreground">Key Features:</h3>
-                      <ul className="space-y-4">
-                        {service.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-start space-x-4">
-                            <CheckCircle className="h-5 w-5 text-success mt-1 flex-shrink-0" />
-                            <span className="text-foreground font-light leading-relaxed">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="bg-accent/5 border border-accent/20 rounded-xl p-8">
-                      <div className="flex items-center space-x-3 mb-4">
-                        <Brain className="h-6 w-6 text-accent" />
-                        <span className="text-lg font-medium text-accent">AI Integration</span>
-                      </div>
-                      <p className="text-foreground font-light leading-relaxed mb-6">{service.aiIntegration}</p>
-                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        {service.benefits.map((benefit, idx) => (
-                          <div key={idx} className="text-center p-4 bg-success/10 border border-success/20 rounded-lg">
-                            <div className="text-sm font-medium text-success">{benefit}</div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-                    <div className="bg-card border border-border rounded-xl p-10 shadow-subtle">
-                      <div className="space-y-8">
-                        <div className="text-center">
-                          <service.icon className="h-20 w-20 text-primary mx-auto mb-6" />
-                          <h3 className="text-2xl font-light text-foreground mb-2">Service Highlights</h3>
+        {/* Services Grid */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="space-y-24">
+              {services.map((service, index) => (
+                <div key={service.id} id={service.id} className="scroll-mt-20">
+                  <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+                    <div className={`space-y-8 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                      <div className="flex items-center space-x-6">
+                        <div className="bg-primary/10 p-5 rounded-xl">
+                          <service.icon className="h-12 w-12 text-primary" />
                         </div>
-                        
-                        <div className="grid grid-cols-2 gap-4">
-                          <div className="text-center p-6 bg-secondary/50 border border-border rounded-xl hover:shadow-subtle transition-all duration-300">
-                            <Eye className="h-10 w-10 text-primary mx-auto mb-3" />
-                            <div className="text-sm font-medium text-foreground">Real-time</div>
-                            <div className="text-xs text-muted-foreground font-light">Monitoring</div>
-                          </div>
-                          <div className="text-center p-6 bg-secondary/50 border border-border rounded-xl hover:shadow-subtle transition-all duration-300">
-                            <BarChart3 className="h-10 w-10 text-primary mx-auto mb-3" />
-                            <div className="text-sm font-medium text-foreground">Predictive</div>
-                            <div className="text-xs text-muted-foreground font-light">Analytics</div>
-                          </div>
-                          <div className="text-center p-6 bg-secondary/50 border border-border rounded-xl hover:shadow-subtle transition-all duration-300">
-                            <Zap className="h-10 w-10 text-primary mx-auto mb-3" />
-                            <div className="text-sm font-medium text-foreground">Automated</div>
-                            <div className="text-xs text-muted-foreground font-light">Optimization</div>
-                          </div>
-                          <div className="text-center p-6 bg-secondary/50 border border-border rounded-xl hover:shadow-subtle transition-all duration-300">
-                            <Shield className="h-10 w-10 text-primary mx-auto mb-3" />
-                            <div className="text-sm font-medium text-foreground">Enhanced</div>
-                            <div className="text-xs text-muted-foreground font-light">Safety</div>
-                          </div>
+                        <h2 className="text-3xl font-semibold text-foreground">{service.title}</h2>
+                      </div>
+                      
+                      <p className="text-lg text-muted-foreground leading-relaxed">{service.description}</p>
+                      
+                      <div className="space-y-6">
+                        <h3 className="text-xl font-semibold text-foreground">Key Features:</h3>
+                        <ul className="space-y-4">
+                          {service.features.map((feature, idx) => (
+                            <li key={idx} className="flex items-start space-x-4">
+                              <CheckCircle className="h-5 w-5 text-success mt-1 flex-shrink-0" />
+                              <span className="text-foreground leading-relaxed">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="bg-primary/5 border-2 border-primary/20 rounded-xl p-8">
+                        <div className="flex items-center space-x-3 mb-4">
+                          <Brain className="h-6 w-6 text-primary" />
+                          <span className="text-lg font-semibold text-primary">AI Integration</span>
                         </div>
-                        
-                        <Button variant="outline" className="w-full shadow-subtle hover:shadow-medium transition-all duration-300" asChild>
-                          <Link to={`/contact?service=${service.id}`}>
-                            Get Service Details
-                            <ArrowRight className="ml-2 h-4 w-4" />
-                          </Link>
-                        </Button>
+                        <p className="text-foreground leading-relaxed mb-6">{service.aiIntegration}</p>
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                          {service.benefits.map((benefit, idx) => (
+                            <div key={idx} className="text-center p-4 bg-success/10 border border-success/20 rounded-lg">
+                              <div className="text-sm font-semibold text-success">{benefit}</div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
+                      <div className="bg-card border-2 border-border rounded-xl p-10 shadow-subtle hover:shadow-medium transition-all duration-300">
+                        <div className="space-y-8">
+                          <div className="text-center">
+                            <service.icon className="h-20 w-20 text-primary mx-auto mb-6" />
+                            <h3 className="text-2xl font-semibold text-foreground mb-2">Service Highlights</h3>
+                          </div>
+                          
+                          <div className="grid grid-cols-2 gap-4">
+                            <div className="text-center p-6 bg-secondary/50 border border-border rounded-xl hover:shadow-subtle transition-all duration-300">
+                              <Eye className="h-10 w-10 text-primary mx-auto mb-3" />
+                              <div className="text-sm font-semibold text-foreground">Real-time</div>
+                              <div className="text-xs text-muted-foreground">Monitoring</div>
+                            </div>
+                            <div className="text-center p-6 bg-secondary/50 border border-border rounded-xl hover:shadow-subtle transition-all duration-300">
+                              <BarChart3 className="h-10 w-10 text-primary mx-auto mb-3" />
+                              <div className="text-sm font-semibold text-foreground">Predictive</div>
+                              <div className="text-xs text-muted-foreground">Analytics</div>
+                            </div>
+                            <div className="text-center p-6 bg-secondary/50 border border-border rounded-xl hover:shadow-subtle transition-all duration-300">
+                              <Zap className="h-10 w-10 text-primary mx-auto mb-3" />
+                              <div className="text-sm font-semibold text-foreground">Automated</div>
+                              <div className="text-xs text-muted-foreground">Optimization</div>
+                            </div>
+                            <div className="text-center p-6 bg-secondary/50 border border-border rounded-xl hover:shadow-subtle transition-all duration-300">
+                              <Shield className="h-10 w-10 text-primary mx-auto mb-3" />
+                              <div className="text-sm font-semibold text-foreground">Enhanced</div>
+                              <div className="text-xs text-muted-foreground">Safety</div>
+                            </div>
+                          </div>
+                          
+                          <Button variant="outline" className="w-full shadow-subtle hover:shadow-medium transition-all duration-300" asChild>
+                            <Link to={`/contact?service=${service.id}`}>
+                              Get Service Details
+                              <ArrowRight className="ml-2 h-4 w-4" />
+                            </Link>
+                          </Button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-primary text-primary-foreground">
@@ -266,7 +260,8 @@ const Services = () => {
             </Button>
           </div>
         </div>
-      </section>
+        </section>
+      </div>
     </Layout>
   );
 };

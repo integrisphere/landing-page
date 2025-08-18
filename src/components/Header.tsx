@@ -20,7 +20,7 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-card/98 backdrop-blur-md border-b border-border shadow-subtle">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-border shadow-subtle">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -35,14 +35,16 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-10">
+          <nav className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
                 className={cn(
-                  "text-sm font-light tracking-wide transition-all duration-300 hover:text-primary relative group",
-                  isActive(item.href) ? "text-primary" : "text-muted-foreground"
+                  "text-base font-medium tracking-normal transition-all duration-300 hover:text-primary relative group py-2 px-3 rounded-md",
+                  isActive(item.href) 
+                    ? "text-primary bg-primary/5" 
+                    : "text-foreground hover:bg-secondary"
                 )}
               >
                 {item.name}
@@ -52,39 +54,40 @@ const Header = () => {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="outline" size="sm" className="font-light" asChild>
+          <div className="hidden lg:flex items-center space-x-3">
+            <Button variant="outline" size="default" asChild>
               <Link to="/contact">Get Quote</Link>
             </Button>
-            <Button variant="default" size="sm" className="font-light shadow-medium hover:shadow-strong transition-all duration-300" asChild>
+            <Button variant="default" size="default" asChild>
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-lg hover:bg-secondary transition-colors duration-200"
+            className="lg:hidden p-3 rounded-lg hover:bg-secondary transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-ring"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
             {isMenuOpen ? (
-              <X className="h-6 w-6 text-muted-foreground" />
+              <X className="h-6 w-6 text-foreground" />
             ) : (
-              <Menu className="h-6 w-6 text-muted-foreground" />
+              <Menu className="h-6 w-6 text-foreground" />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-border animate-fade-in">
-            <nav className="py-6 space-y-1">
+          <div className="lg:hidden border-t border-border animate-fade-in bg-white">
+            <nav className="py-6 space-y-2">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
                   className={cn(
-                    "block px-4 py-3 text-sm font-light tracking-wide transition-all duration-200 hover:text-primary hover:bg-secondary/50 rounded-lg",
-                    isActive(item.href) ? "text-primary bg-secondary" : "text-muted-foreground"
+                    "block px-4 py-4 text-base font-medium tracking-normal transition-all duration-300 hover:text-primary hover:bg-secondary rounded-lg",
+                    isActive(item.href) ? "text-primary bg-primary/5" : "text-foreground"
                   )}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -92,10 +95,10 @@ const Header = () => {
                 </Link>
               ))}
               <div className="px-4 pt-6 space-y-3">
-                <Button variant="outline" size="sm" className="w-full font-light" asChild>
+                <Button variant="outline" size="default" className="w-full" asChild>
                   <Link to="/contact">Get Quote</Link>
                 </Button>
-                <Button variant="default" size="sm" className="w-full font-light" asChild>
+                <Button variant="default" size="default" className="w-full" asChild>
                   <Link to="/contact">Contact Us</Link>
                 </Button>
               </div>

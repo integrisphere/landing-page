@@ -2,73 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-/* IntegriSphere Solutions Design System - Classic Engineering Theme
-Subtle colors, easy on the eyes, off-white backgrounds
+/* IntegriSphere Solutions Design System - Professional & Accessible
+Clean design, excellent readability, WCAG AA compliant colors
 */
 
 @layer base {
   :root {
-    /* Foundation - Off-white & Muted Tones */
-    --background: 45 20% 97%;
-    --foreground: 210 15% 25%;
+    /* Foundation - Clean White & Professional Grays */
+    --background: 0 0% 100%;           /* Pure white */
+    --foreground: 210 12% 20%;         /* Charcoal - 4.5:1 contrast ratio */
 
-    --card: 45 25% 98%;
-    --card-foreground: 210 15% 25%;
+    --card: 0 0% 100%;                 /* White cards */
+    --card-foreground: 210 12% 20%;    /* Charcoal text on cards */
 
-    --popover: 45 25% 98%;
-    --popover-foreground: 210 15% 25%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 12% 20%;
 
-    /* Primary - Muted Navy Blue */
-    --primary: 220 35% 45%;
-    --primary-foreground: 45 25% 98%;
-    --primary-glow: 220 40% 55%;
+    /* Primary - Professional Blue */
+    --primary: 210 100% 40%;           /* Professional blue #007BFF */
+    --primary-foreground: 0 0% 100%;   /* White text on blue */
+    --primary-glow: 210 100% 50%;      /* Lighter blue for hover */
 
-    /* Secondary - Warm Beige */
-    --secondary: 45 15% 92%;
-    --secondary-foreground: 210 20% 35%;
+    /* Secondary - Light Gray */
+    --secondary: 210 16% 95%;          /* Very light gray #F8F9FA */
+    --secondary-foreground: 210 12% 35%; /* Medium gray text */
 
-    /* Muted - Subtle Gray-Beige */
-    --muted: 45 10% 94%;
-    --muted-foreground: 210 12% 55%;
+    /* Muted - Subtle Grays */
+    --muted: 210 16% 93%;              /* Light gray backgrounds */
+    --muted-foreground: 210 8% 45%;    /* Medium gray for secondary text */
 
-    /* Accent - Muted Teal */
-    --accent: 180 25% 55%;
-    --accent-foreground: 45 25% 98%;
-    --accent-glow: 180 30% 65%;
+    /* Accent - Professional Teal */
+    --accent: 170 100% 35%;            /* Professional teal #17A2B8 */
+    --accent-foreground: 0 0% 100%;    /* White text on teal */
+    --accent-glow: 170 100% 45%;       /* Lighter teal */
 
-    /* Success - Soft Green */
-    --success: 145 25% 45%;
-    --success-foreground: 45 25% 98%;
+    /* Success - Professional Green */
+    --success: 140 60% 35%;            /* Success green #28A745 */
+    --success-foreground: 0 0% 100%;
 
-    /* Warning - Muted Orange */
-    --warning: 35 35% 55%;
-    --warning-foreground: 45 25% 98%;
+    /* Warning - Amber */
+    --warning: 45 100% 50%;            /* Warning amber #FFC107 */
+    --warning-foreground: 210 12% 20%;
 
-    --destructive: 355 45% 55%;
-    --destructive-foreground: 45 25% 98%;
+    /* Error - Professional Red */
+    --destructive: 0 70% 50%;          /* Error red #DC3545 */
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 45 15% 85%;
-    --input: 45 20% 90%;
-    --ring: 220 35% 45%;
+    /* Interactive Elements */
+    --border: 210 14% 89%;             /* Light border #E9ECEF */
+    --input: 210 14% 89%;              /* Input borders */
+    --ring: 210 100% 40%;              /* Focus ring color */
 
-    /* Gradients - Subtle & Elegant */
-    --gradient-primary: linear-gradient(135deg, hsl(220 35% 45%), hsl(220 40% 55%));
-    --gradient-accent: linear-gradient(135deg, hsl(180 25% 55%), hsl(180 30% 65%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 35% 45%) 0%, hsl(210 30% 50%) 50%, hsl(180 25% 55%) 100%);
-    --gradient-surface: linear-gradient(180deg, hsl(45 25% 98%) 0%, hsl(45 20% 96%) 100%);
+    /* Gradients - Subtle & Professional */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 40%), hsl(210 100% 50%));
+    --gradient-accent: linear-gradient(135deg, hsl(170 100% 35%), hsl(170 100% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 40%) 0%, hsl(200 100% 45%) 50%, hsl(170 100% 35%) 100%);
+    --gradient-surface: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 16% 98%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(210 16% 98%) 0%, hsl(0 0% 100%) 100%);
 
-    /* Shadows - Soft & Subtle */
-    --shadow-subtle: 0 2px 8px hsl(210 15% 25% / 0.03);
-    --shadow-medium: 0 4px 16px hsl(210 15% 25% / 0.06);
-    --shadow-strong: 0 8px 32px hsl(210 15% 25% / 0.1);
-    --shadow-glow: 0 0 20px hsl(220 35% 45% / 0.15);
+    /* Shadows - Professional & Subtle */
+    --shadow-subtle: 0 1px 3px hsla(210, 12%, 20%, 0.1);
+    --shadow-medium: 0 2px 8px hsla(210, 12%, 20%, 0.12);
+    --shadow-strong: 0 4px 16px hsla(210, 12%, 20%, 0.15);
+    --shadow-glow: 0 0 20px hsla(210, 100%, 40%, 0.15);
 
-    /* Animations - Smooth & Elegant */
-    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    --transition-spring: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    --transition-fade: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    /* Animations - Smooth & Accessible */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.175);
+    --transition-fade: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 
-    --radius: 0.5rem;
+    --radius: 6px;
 
     --sidebar-background: 0 0% 98%;
 
@@ -88,41 +91,42 @@ Subtle colors, easy on the eyes, off-white backgrounds
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode with professional colors */
+    --background: 210 12% 8%;          /* Dark background */
+    --foreground: 0 0% 95%;            /* Light text */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 210 12% 10%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 210 12% 10%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 210 100% 60%;           /* Brighter blue for dark mode */
+    --primary-foreground: 210 12% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 12% 15%;
+    --secondary-foreground: 0 0% 85%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 12% 15%;
+    --muted-foreground: 210 8% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 170 100% 45%;
+    --accent-foreground: 210 12% 8%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 210 12% 8%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 210 12% 20%;
+    --input: 210 12% 20%;
+    --ring: 210 100% 60%;
+    --sidebar-background: 210 12% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 210 100% 60%;
+    --sidebar-primary-foreground: 210 12% 8%;
+    --sidebar-accent: 210 12% 15%;
+    --sidebar-accent-foreground: 0 0% 85%;
+    --sidebar-border: 210 12% 20%;
+    --sidebar-ring: 210 100% 60%;
   }
 }
 
@@ -132,8 +136,54 @@ Subtle colors, easy on the eyes, off-white backgrounds
   }
 
   body {
-    @apply bg-background text-foreground font-light;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+
+  /* Typography Scale */
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+  }
+
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+  h5 { font-size: 1.125rem; }
+  h6 { font-size: 1rem; }
+
+  p { 
+    margin-bottom: 1rem; 
+    line-height: 1.6;
+  }
+
+  /* Links */
+  a {
+    color: hsl(var(--primary));
+    text-decoration: none;
+    transition: var(--transition-smooth);
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Focus states for accessibility */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+    border-radius: var(--radius);
+  }
+
+  /* Button focus overrides */
+  button:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
   }
 
   /* Page transitions */

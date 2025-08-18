@@ -43,76 +43,70 @@ const About = () => {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-gradient-surface animate-fade-in">
-        {/* Subtle background overlay */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-background via-muted to-secondary/30"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,hsl(var(--primary))_0%,transparent_50%)] opacity-10"></div>
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 container mx-auto px-6 py-32">
-          <div className="max-w-5xl text-center mx-auto">
-            <div className="inline-block mb-8">
-              <span className="px-6 py-3 bg-secondary border border-border text-muted-foreground rounded-full text-sm font-medium shadow-subtle">
-                Engineering Heritage • Global Innovation
-              </span>
+      <div className="animate-fade-in">
+        {/* Hero Section */}
+        <section className="py-24 bg-gradient-subtle">
+          <div className="container mx-auto px-6 text-center">
+            <div className="max-w-4xl mx-auto">
+              <div className="inline-block mb-6">
+                <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">
+                  Engineering Heritage • Global Innovation
+                </span>
+              </div>
+              <h1 className="text-5xl md:text-6xl font-bold mb-8 text-foreground leading-tight">
+                Engineering Excellence Meets
+                <span className="block text-primary">AI Innovation</span>
+              </h1>
+              <p className="text-xl mb-10 max-w-3xl mx-auto text-muted-foreground leading-relaxed">
+                Built on 25+ years of Western Canadian engineering excellence, we've evolved into a global leader 
+                by providing forward-thinking solutions in asset integrity that traditional inspections couldn't deliver.
+              </p>
+              <Button variant="hero" size="lg" className="text-lg px-8 py-6" asChild>
+                <Link to="/contact">
+                  Get to Know Us
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-light leading-tight mb-8 text-foreground">
-              Engineering Excellence Meets
-              <span className="block font-normal text-primary mt-2">AI Innovation</span>
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12 font-light">
-              Built on 25+ years of Western Canadian engineering excellence, we've evolved into a global leader 
-              by providing forward-thinking solutions in asset integrity that traditional inspections couldn't deliver.
-            </p>
-            <Button variant="default" size="lg" className="text-base px-10 py-6 shadow-medium hover:shadow-strong transition-all duration-500" asChild>
-              <Link to="/contact">
-                Get to Know Us
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Mission & Vision */}
-      <section className="py-24 bg-background animate-fade-in">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-10">
-              <div className="bg-card border border-border rounded-xl p-10 shadow-subtle">
-                <h2 className="text-3xl font-light text-foreground mb-6">Our Mission</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed font-light">
-                  To create measurable value for our clients' risk management strategies by delivering 
-                  innovative, independent, and sustainable integrity solutions that exceed expectations 
-                  and drive operational excellence.
-                </p>
+        {/* Mission & Vision */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className="space-y-8">
+                <div className="bg-card border-2 border-border rounded-xl p-10 shadow-subtle hover:shadow-medium transition-all duration-300">
+                  <h2 className="text-3xl font-semibold text-foreground mb-6">Our Mission</h2>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    To create measurable value for our clients' risk management strategies by delivering 
+                    innovative, independent, and sustainable integrity solutions that exceed expectations 
+                    and drive operational excellence.
+                  </p>
+                </div>
+                
+                <div className="bg-secondary border-2 border-border rounded-xl p-10 shadow-subtle hover:shadow-medium transition-all duration-300">
+                  <h2 className="text-3xl font-semibold text-foreground mb-6">Our Vision</h2>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    To be the global leader in asset integrity services, driving efficiency, safety, 
+                    and sustainability through engineering excellence and AI-driven insights that 
+                    transform how industries manage their critical assets.
+                  </p>
+                </div>
               </div>
-              
-              <div className="bg-secondary border border-border rounded-xl p-10 shadow-subtle">
-                <h2 className="text-3xl font-light text-foreground mb-6">Our Vision</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed font-light">
-                  To be the global leader in asset integrity services, driving efficiency, safety, 
-                  and sustainability through engineering excellence and AI-driven insights that 
-                  transform how industries manage their critical assets.
-                </p>
-              </div>
-            </div>
 
-            <div className="relative">
-              <div className="bg-gradient-to-br from-secondary to-muted p-8 rounded-2xl">
-                <img 
-                  src={inspectionTeam} 
-                  alt="IntegriSphere inspection team" 
-                  className="w-full rounded-xl shadow-medium"
-                />
+              <div className="relative">
+                <div className="bg-gradient-subtle p-8 rounded-2xl shadow-medium">
+                  <img 
+                    src={inspectionTeam} 
+                    alt="IntegriSphere inspection team" 
+                    className="w-full rounded-xl shadow-subtle"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Our Story */}
       <section className="py-20 bg-gradient-surface">
@@ -234,7 +228,8 @@ const About = () => {
             </Button>
           </div>
         </div>
-      </section>
+        </section>
+      </div>
     </Layout>
   );
 };

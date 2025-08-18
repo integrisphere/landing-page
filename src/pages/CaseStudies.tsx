@@ -127,43 +127,51 @@ const CaseStudies = () => {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Proven Success Stories
-          </h1>
-          <p className="text-xl mb-8 max-w-3xl mx-auto text-primary-foreground/90">
-            Real-world case studies demonstrating the transformative power of AI-driven 
-            asset integrity solutions across diverse industries and applications.
-          </p>
-        </div>
-      </section>
-
-      {/* Results Overview */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-6">Measurable Impact</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our AI-enhanced solutions deliver quantifiable results that directly impact your bottom line
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center bg-card border border-border rounded-lg p-6 shadow-medium">
-                <div className="bg-accent/10 p-4 rounded-full w-fit mx-auto mb-4">
-                  <benefit.icon className="h-10 w-10 text-accent" />
-                </div>
-                <div className="text-3xl font-bold text-foreground mb-2">{benefit.value}</div>
-                <div className="text-lg font-semibold text-foreground mb-2">{benefit.title}</div>
-                <div className="text-sm text-muted-foreground">{benefit.description}</div>
+      <div className="animate-fade-in">
+        {/* Hero Section */}
+        <section className="py-24 bg-gradient-subtle">
+          <div className="container mx-auto px-6 text-center">
+            <div className="max-w-4xl mx-auto">
+              <div className="inline-block mb-6">
+                <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">
+                  Success Stories • Proven Results
+                </span>
               </div>
-            ))}
+              <h1 className="text-5xl md:text-6xl font-bold mb-8 text-foreground leading-tight">
+                Proven Success Stories
+              </h1>
+              <p className="text-xl mb-10 max-w-3xl mx-auto text-muted-foreground leading-relaxed">
+                Real-world case studies demonstrating the transformative power of AI-driven 
+                asset integrity solutions across diverse industries and applications.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Results Overview */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-20">
+              <h2 className="text-4xl font-bold text-foreground mb-6">Measurable Impact</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Our AI-enhanced solutions deliver quantifiable results that directly impact your bottom line
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-center bg-card border-2 border-border rounded-xl p-8 shadow-subtle hover:shadow-medium transition-all duration-300 hover:-translate-y-1">
+                  <div className="bg-primary/10 p-6 rounded-full w-fit mx-auto mb-6">
+                    <benefit.icon className="h-12 w-12 text-primary" />
+                  </div>
+                  <div className="text-4xl font-bold text-foreground mb-3">{benefit.value}</div>
+                  <div className="text-lg font-semibold text-foreground mb-3">{benefit.title}</div>
+                  <div className="text-base text-muted-foreground leading-relaxed">{benefit.description}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
       {/* Case Studies */}
       <section className="py-20 bg-gradient-surface">
@@ -313,7 +321,8 @@ const CaseStudies = () => {
             </Button>
           </div>
         </div>
-      </section>
+        </section>
+      </div>
     </Layout>
   );
 };

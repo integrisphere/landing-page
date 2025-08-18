@@ -87,82 +87,72 @@ const Technology = () => {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0">
-          <img 
-            src={technologyHero} 
-            alt="Advanced AI technology laboratory" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/75 to-primary/50"></div>
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <div className="max-w-4xl text-primary-foreground text-center">
-            <div className="inline-block mb-6">
-              <span className="px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-medium backdrop-blur-sm">
-                Proprietary AI Technology • Industry Leading
-              </span>
+      <div className="animate-fade-in">
+        {/* Hero Section */}
+        <section className="py-24 bg-gradient-subtle">
+          <div className="container mx-auto px-6 text-center">
+            <div className="max-w-4xl mx-auto">
+              <div className="inline-block mb-6">
+                <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">
+                  AI Technology • Proven Solutions
+                </span>
+              </div>
+              <h1 className="text-5xl md:text-6xl font-bold mb-8 text-foreground leading-tight">
+                Revolutionizing Asset Integrity
+                <span className="block text-primary">with AI-Driven Solutions</span>
+              </h1>
+              <p className="text-xl mb-10 max-w-3xl mx-auto text-muted-foreground leading-relaxed">
+                Our proprietary AI technologies transform traditional asset management into 
+                predictive, proactive, and profitable operations.
+              </p>
+              <Button variant="hero" size="lg" className="text-lg px-8 py-6" asChild>
+                <Link to="/contact">
+                  Explore AI Implementation
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-              Revolutionizing Asset Integrity
-              <span className="block text-accent">with AI-Driven Solutions</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed mb-8">
-              Our proprietary AI technologies transform traditional asset management into 
-              predictive, proactive, and profitable operations.
-            </p>
-            <Button variant="premium" size="lg" className="text-lg px-8 py-6" asChild>
-              <Link to="/contact">
-                Explore AI Implementation
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* AI Suite Overview */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-6">Our AI Suite</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive artificial intelligence solutions designed specifically for asset integrity management
-            </p>
-          </div>
+        {/* AI Suite Overview */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-20">
+              <h2 className="text-4xl font-bold text-foreground mb-6">Our AI Suite</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Comprehensive artificial intelligence solutions designed specifically for asset integrity management
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {aiSuite.map((item, index) => (
-              <div 
-                key={index}
-                className="bg-card border border-border rounded-lg p-8 shadow-medium hover:shadow-strong transition-all duration-300"
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="bg-accent/10 p-4 rounded-lg flex-shrink-0">
-                    <item.icon className="h-8 w-8 text-accent" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-semibold text-foreground mb-3">{item.title}</h3>
-                    <p className="text-muted-foreground mb-4">{item.description}</p>
-                    <ul className="space-y-2">
-                      {item.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start space-x-2">
-                          <CheckCircle className="h-4 w-4 text-success mt-0.5 flex-shrink-0" />
-                          <span className="text-sm text-foreground">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {aiSuite.map((item, index) => (
+                <div 
+                  key={index}
+                  className="bg-card border-2 border-border rounded-xl p-8 shadow-subtle hover:shadow-medium transition-all duration-300 hover:-translate-y-1"
+                >
+                  <div className="flex items-start space-x-6">
+                    <div className="bg-primary/10 p-4 rounded-xl flex-shrink-0">
+                      <item.icon className="h-10 w-10 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-semibold text-foreground mb-4">{item.title}</h3>
+                      <p className="text-muted-foreground mb-6 leading-relaxed">{item.description}</p>
+                      <ul className="space-y-3">
+                        {item.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-start space-x-3">
+                            <CheckCircle className="h-5 w-5 text-success mt-0.5 flex-shrink-0" />
+                            <span className="text-base text-foreground">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Proprietary Tools */}
       <section className="py-20 bg-gradient-surface">
@@ -318,7 +308,8 @@ const Technology = () => {
             </Button>
           </div>
         </div>
-      </section>
+        </section>
+      </div>
     </Layout>
   );
 };

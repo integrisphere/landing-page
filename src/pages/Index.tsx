@@ -6,9 +6,11 @@ import ServicesPreview from "@/components/ServicesPreview";
 const Index = () => {
   return (
     <Layout>
-      <Hero />
-      <ApproachSection />
-      <ServicesPreview />
+      <div className="animate-fade-in">
+        <Hero />
+        <ServicesPreview />
+        <ApproachSection />
+      </div>
     </Layout>
   );
 };
