@@ -98,38 +98,38 @@ const ApproachSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-surface animate-fade-in">
+    <section className="py-32 bg-background animate-fade-in">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6">
+        <div className="text-center mb-24">
+          <h2 className="text-5xl md:text-6xl font-semibold text-foreground mb-8">
             Our Approach to Integrity Management
           </h2>
-          <p className="text-xl font-light text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Gap Analysis & Optimization through Engineering Excellence and AI-Driven Innovation
           </p>
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
-          <div className="space-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-24">
+          <div className="space-y-10">
             {steps.map((step, index) => (
               <div 
                 key={index} 
-                className="bg-card border border-border rounded-xl p-8 shadow-subtle hover:shadow-medium transition-all duration-500 group animate-slide-up"
+                className="bg-card border border-border rounded-xl p-10 shadow-medium hover:shadow-strong transition-all duration-500 group animate-slide-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="flex items-start space-x-6">
-                  <div className="bg-accent/10 p-4 rounded-xl flex-shrink-0 group-hover:bg-accent/20 transition-colors duration-300">
-                    <step.icon className="h-7 w-7 text-accent" />
+                <div className="flex items-start space-x-8">
+                  <div className="bg-accent/15 p-5 rounded-xl flex-shrink-0 group-hover:bg-accent/25 transition-colors duration-300">
+                    <step.icon className="h-8 w-8 text-accent" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-medium text-foreground mb-4">{step.title}</h3>
-                    <p className="text-muted-foreground font-light mb-6 leading-relaxed">{step.description}</p>
-                    <ul className="space-y-3">
+                    <h3 className="text-2xl font-semibold text-foreground mb-5">{step.title}</h3>
+                    <p className="text-muted-foreground text-lg mb-8 leading-relaxed">{step.description}</p>
+                    <ul className="space-y-4">
                       {step.highlights.map((highlight, idx) => (
-                        <li key={idx} className="flex items-start space-x-3 text-sm">
-                          <CheckCircle className="h-4 w-4 text-success mt-1 flex-shrink-0" />
-                          <span className="text-foreground font-light leading-relaxed">{highlight}</span>
+                        <li key={idx} className="flex items-start space-x-4 text-base">
+                          <CheckCircle className="h-5 w-5 text-success mt-1 flex-shrink-0" />
+                          <span className="text-foreground leading-relaxed">{highlight}</span>
                         </li>
                       ))}
                     </ul>

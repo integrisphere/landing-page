@@ -28,11 +28,15 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-surface animate-fade-in">
-      {/* Subtle background overlay */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden animate-fade-in">
+      {/* Hero background image */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-muted to-secondary/30"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary))_0%,transparent_50%)] opacity-5"></div>
+        <img 
+          src={heroImage} 
+          alt="Industrial pipeline infrastructure" 
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-primary/70"></div>
       </div>
 
       {/* Content */}
@@ -40,49 +44,49 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto text-center">
           <div className="space-y-8 animate-slide-up">
             <div className="inline-block">
-              <span className="px-6 py-3 bg-secondary border border-border text-muted-foreground rounded-full text-sm font-medium shadow-subtle">
+              <span className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-lg font-semibold shadow-subtle">
                 AI by AI - Asset Integrity by Artificial Intelligence
               </span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-light leading-tight text-foreground">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold leading-tight text-white">
               Empowering Global
-              <span className="block font-normal text-primary mt-2">Asset Integrity</span>
-              <span className="block text-3xl md:text-4xl lg:text-5xl font-light text-muted-foreground mt-4">
+              <span className="block font-bold text-accent-glow mt-4">Asset Integrity</span>
+              <span className="block text-4xl md:text-5xl lg:text-6xl font-medium text-white/90 mt-6">
                 Through Engineering Excellence
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light">
+            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed font-medium">
               From pipelines to boilers, we deliver world-class inspection and engineering solutions 
               powered by custom AI technologies—ensuring asset safety, regulatory compliance, 
               and cost-efficiency worldwide.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-8 justify-center">
-              <Button variant="default" size="lg" className="text-base px-8 py-6 shadow-medium hover:shadow-strong transition-all duration-500" asChild>
+            <div className="flex flex-col sm:flex-row gap-6 pt-12 justify-center">
+              <Button variant="default" size="lg" className="text-lg px-10 py-7 shadow-medium hover:shadow-strong transition-all duration-500" asChild>
                 <Link to="/services">
                   Explore Our Services
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-6 w-6" />
                 </Link>
               </Button>
-              <Button variant="secondary" size="lg" className="text-base px-8 py-6 shadow-subtle hover:shadow-medium transition-all duration-500" asChild>
+              <Button variant="outline" size="lg" className="text-lg px-10 py-7 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-primary shadow-subtle hover:shadow-medium transition-all duration-500" asChild>
                 <Link to="/contact">Contact Us Today</Link>
               </Button>
             </div>
           </div>
 
           {/* Key Features */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-32">
             {features.map((feature, index) => (
               <div 
                 key={index}
-                className="group bg-card border border-border rounded-xl p-8 shadow-subtle hover:shadow-medium transition-all duration-500 animate-fade-in"
+                className="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-8 shadow-subtle hover:shadow-medium transition-all duration-500 animate-fade-in"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <feature.icon className="h-10 w-10 text-primary mb-4 group-hover:text-accent transition-colors duration-300" />
-                <h3 className="font-medium text-lg mb-3 text-card-foreground">{feature.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed font-light">{feature.description}</p>
+                <feature.icon className="h-12 w-12 text-accent-glow mb-6 group-hover:text-white transition-colors duration-300" />
+                <h3 className="font-semibold text-xl mb-4 text-white">{feature.title}</h3>
+                <p className="text-white/80 text-base leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>

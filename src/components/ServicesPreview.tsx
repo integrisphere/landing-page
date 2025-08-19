@@ -50,63 +50,63 @@ const ServicesPreview = () => {
   ];
 
   return (
-    <section className="py-24 bg-background animate-fade-in">
+    <section className="py-32 bg-muted animate-fade-in">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6">
+        <div className="text-center mb-24">
+          <h2 className="text-5xl md:text-6xl font-semibold text-foreground mb-8">
             Comprehensive Asset Integrity Services
           </h2>
-          <p className="text-xl font-light text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Every service enhanced with custom AI solutions for superior decision-making, 
             cost reduction, and enhanced safety
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-card border border-border rounded-xl p-8 shadow-subtle hover:shadow-medium transition-all duration-500 group animate-slide-up"
+              className="bg-card border border-border rounded-xl p-10 shadow-medium hover:shadow-strong transition-all duration-500 group animate-slide-up"
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              <div className="mb-6">
-                <div className="bg-primary/10 p-4 rounded-xl w-fit mb-4 group-hover:bg-primary/20 transition-colors duration-300">
-                  <service.icon className="h-8 w-8 text-primary" />
+              <div className="mb-8">
+                <div className="bg-primary/15 p-5 rounded-xl w-fit mb-6 group-hover:bg-primary/25 transition-colors duration-300">
+                  <service.icon className="h-10 w-10 text-primary" />
                 </div>
-                <h3 className="text-xl font-medium text-foreground mb-4">{service.title}</h3>
-                <p className="text-muted-foreground font-light mb-6 leading-relaxed">{service.description}</p>
+                <h3 className="text-2xl font-semibold text-foreground mb-5">{service.title}</h3>
+                <p className="text-muted-foreground text-lg mb-8 leading-relaxed">{service.description}</p>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-8">
                 <div>
-                  <h4 className="text-sm font-medium text-foreground mb-3">Key Features:</h4>
-                  <ul className="space-y-2">
+                  <h4 className="text-base font-semibold text-foreground mb-4">Key Features:</h4>
+                  <ul className="space-y-3">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="text-sm text-muted-foreground flex items-center font-light">
-                        <div className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0"></div>
+                      <li key={idx} className="text-base text-muted-foreground flex items-center">
+                        <div className="w-2 h-2 bg-primary rounded-full mr-4 flex-shrink-0"></div>
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="bg-accent/5 border border-accent/20 rounded-xl p-4">
-                  <div className="flex items-center space-x-2 mb-3">
-                    <Brain className="h-4 w-4 text-accent" />
-                    <span className="text-sm font-medium text-accent">AI Integration</span>
+                <div className="bg-accent/10 border border-accent/30 rounded-xl p-6">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <Brain className="h-5 w-5 text-accent" />
+                    <span className="text-base font-semibold text-accent">AI Integration</span>
                   </div>
-                  <p className="text-sm text-foreground font-light leading-relaxed">{service.aiFeature}</p>
+                  <p className="text-base text-foreground leading-relaxed">{service.aiFeature}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-16">
-          <Button variant="default" size="lg" className="shadow-medium hover:shadow-strong transition-all duration-300" asChild>
+        <div className="text-center mt-20">
+          <Button variant="default" size="lg" className="text-lg px-12 py-8 shadow-medium hover:shadow-strong transition-all duration-300" asChild>
             <Link to="/services">
               Explore All Services
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-3 h-6 w-6" />
             </Link>
           </Button>
         </div>

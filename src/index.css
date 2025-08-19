@@ -8,57 +8,57 @@ Clean design, excellent readability, WCAG AA compliant colors
 
 @layer base {
   :root {
-    /* Foundation - Clean White & Professional Grays */
-    --background: 0 0% 100%;           /* Pure white */
-    --foreground: 210 12% 20%;         /* Charcoal - 4.5:1 contrast ratio */
+    /* Foundation - Warm Off-White & Professional Colors */
+    --background: 45 20% 97%;           /* Warm off-white background */
+    --foreground: 210 15% 15%;          /* Deep charcoal text */
 
-    --card: 0 0% 100%;                 /* White cards */
-    --card-foreground: 210 12% 20%;    /* Charcoal text on cards */
+    --card: 0 0% 99%;                   /* Subtle white cards */
+    --card-foreground: 210 15% 15%;     /* Deep charcoal text on cards */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 12% 20%;
+    --popover: 0 0% 99%;
+    --popover-foreground: 210 15% 15%;
 
-    /* Primary - Professional Blue */
-    --primary: 210 100% 40%;           /* Professional blue #007BFF */
-    --primary-foreground: 0 0% 100%;   /* White text on blue */
-    --primary-glow: 210 100% 50%;      /* Lighter blue for hover */
+    /* Primary - Rich Navy Blue */
+    --primary: 215 85% 25%;             /* Rich navy blue */
+    --primary-foreground: 0 0% 98%;     /* Off-white text on navy */
+    --primary-glow: 215 85% 35%;        /* Lighter navy for hover */
 
-    /* Secondary - Light Gray */
-    --secondary: 210 16% 95%;          /* Very light gray #F8F9FA */
-    --secondary-foreground: 210 12% 35%; /* Medium gray text */
+    /* Secondary - Warm Beige */
+    --secondary: 40 25% 92%;            /* Warm light beige */
+    --secondary-foreground: 210 15% 25%; /* Dark text on beige */
 
-    /* Muted - Subtle Grays */
-    --muted: 210 16% 93%;              /* Light gray backgrounds */
-    --muted-foreground: 210 8% 45%;    /* Medium gray for secondary text */
+    /* Muted - Soft Neutrals */
+    --muted: 40 20% 88%;                /* Soft beige-gray */
+    --muted-foreground: 210 10% 40%;    /* Medium gray text */
 
-    /* Accent - Professional Teal */
-    --accent: 170 100% 35%;            /* Professional teal #17A2B8 */
-    --accent-foreground: 0 0% 100%;    /* White text on teal */
-    --accent-glow: 170 100% 45%;       /* Lighter teal */
+    /* Accent - Muted Teal */
+    --accent: 175 50% 30%;              /* Muted teal accent */
+    --accent-foreground: 0 0% 98%;      /* Off-white text on teal */
+    --accent-glow: 175 50% 40%;         /* Lighter teal */
 
-    /* Success - Professional Green */
-    --success: 140 60% 35%;            /* Success green #28A745 */
-    --success-foreground: 0 0% 100%;
+    /* Success - Muted Green */
+    --success: 140 40% 35%;             /* Muted success green */
+    --success-foreground: 0 0% 98%;
 
-    /* Warning - Amber */
-    --warning: 45 100% 50%;            /* Warning amber #FFC107 */
-    --warning-foreground: 210 12% 20%;
+    /* Warning - Warm Amber */
+    --warning: 35 80% 50%;              /* Warm amber */
+    --warning-foreground: 210 15% 15%;
 
-    /* Error - Professional Red */
-    --destructive: 0 70% 50%;          /* Error red #DC3545 */
-    --destructive-foreground: 0 0% 100%;
+    /* Error - Muted Red */
+    --destructive: 355 60% 45%;         /* Muted red */
+    --destructive-foreground: 0 0% 98%;
 
     /* Interactive Elements */
-    --border: 210 14% 89%;             /* Light border #E9ECEF */
-    --input: 210 14% 89%;              /* Input borders */
-    --ring: 210 100% 40%;              /* Focus ring color */
+    --border: 40 15% 85%;               /* Subtle warm border */
+    --input: 40 15% 85%;                /* Input borders */
+    --ring: 215 85% 25%;                /* Focus ring color */
 
-    /* Gradients - Subtle & Professional */
-    --gradient-primary: linear-gradient(135deg, hsl(210 100% 40%), hsl(210 100% 50%));
-    --gradient-accent: linear-gradient(135deg, hsl(170 100% 35%), hsl(170 100% 45%));
-    --gradient-hero: linear-gradient(135deg, hsl(210 100% 40%) 0%, hsl(200 100% 45%) 50%, hsl(170 100% 35%) 100%);
-    --gradient-surface: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 16% 98%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(210 16% 98%) 0%, hsl(0 0% 100%) 100%);
+    /* Solid Colors - No Gradients */
+    --gradient-primary: hsl(215 85% 25%);
+    --gradient-accent: hsl(175 50% 30%);
+    --gradient-hero: hsl(215 85% 25%);
+    --gradient-surface: hsl(45 20% 97%);
+    --gradient-subtle: hsl(40 25% 95%);
 
     /* Shadows - Professional & Subtle */
     --shadow-subtle: 0 1px 3px hsla(210, 12%, 20%, 0.1);
@@ -143,23 +143,24 @@ Clean design, excellent readability, WCAG AA compliant colors
     font-size: 16px;
   }
 
-  /* Typography Scale */
+  /* Typography Scale - Larger, More Readable */
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
     font-weight: 600;
     margin-bottom: 0.5em;
   }
 
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.5rem; }
-  h4 { font-size: 1.25rem; }
-  h5 { font-size: 1.125rem; }
-  h6 { font-size: 1rem; }
+  h1 { font-size: 3.5rem; }
+  h2 { font-size: 2.75rem; }
+  h3 { font-size: 2rem; }
+  h4 { font-size: 1.5rem; }
+  h5 { font-size: 1.25rem; }
+  h6 { font-size: 1.125rem; }
 
   p { 
     margin-bottom: 1rem; 
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 1.125rem;
   }
 
   /* Links */
