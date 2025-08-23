@@ -12,6 +12,9 @@ import CaseStudies from "./pages/CaseStudies";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -20,6 +23,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
@@ -36,3 +40,13 @@ const App = () => (
 );
 
 export default App;
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}

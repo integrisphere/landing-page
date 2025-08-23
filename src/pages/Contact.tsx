@@ -249,7 +249,11 @@ const Contact = () => {
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                id="contact-form"
+                onSubmit={handleSubmit}
+                className="space-y-6"
+              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="firstName">First Name *</Label>
@@ -485,9 +489,7 @@ const Contact = () => {
                     Global Contact
                   </span>
                 </div>
-                <p className="text-muted-foreground">
-                  contact@integrisphere.com
-                </p>
+                <p className="text-muted-foreground">info@integrisphere.com</p>
               </div>
             </div>
           </div>
