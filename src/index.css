@@ -8,57 +8,57 @@ Clean design, excellent readability, WCAG AA compliant colors
 
 @layer base {
   :root {
-    /* Foundation - Warm Off-White & Professional Colors */
-    --background: 45 20% 97%;           /* Warm off-white background */
-    --foreground: 210 15% 15%;          /* Deep charcoal text */
+    /* Foundation - Light backgrounds */
+    --background: 194 100% 99%;         /* light_cyan 900 */
+    --foreground: 210 20% 20%;          /* gunmetal 500 */
 
-    --card: 0 0% 99%;                   /* Subtle white cards */
-    --card-foreground: 210 15% 15%;     /* Deep charcoal text on cards */
+    --card: 194 100% 98%;               /* light_cyan 800 */
+    --card-foreground: 210 20% 20%;     /* gunmetal 500 */
 
-    --popover: 0 0% 99%;
-    --popover-foreground: 210 15% 15%;
+    --popover: 194 100% 98%;
+    --popover-foreground: 210 20% 20%;
 
-    /* Primary - Rich Navy Blue */
-    --primary: 215 85% 25%;             /* Rich navy blue */
-    --primary-foreground: 0 0% 98%;     /* Off-white text on navy */
-    --primary-glow: 215 85% 35%;        /* Lighter navy for hover */
+    /* Primary - Yinmn Blue */
+    --primary: 216 35% 36%;             /* yinmn_blue 500 */
+    --primary-foreground: 194 100% 99%; /* light_cyan 900 */
+    --primary-hover: 216 35% 46%;       /* yinmn_blue 600 */
 
-    /* Secondary - Warm Beige */
-    --secondary: 40 25% 92%;            /* Warm light beige */
-    --secondary-foreground: 210 15% 25%; /* Dark text on beige */
+    /* Secondary - Powder Blue */
+    --secondary: 203 47% 73%;           /* powder_blue 500 */
+    --secondary-foreground: 210 20% 20%; /* gunmetal 500 */
 
-    /* Muted - Soft Neutrals */
-    --muted: 40 20% 88%;                /* Soft beige-gray */
-    --muted-foreground: 210 10% 40%;    /* Medium gray text */
+    /* Muted - Light backgrounds */
+    --muted: 194 100% 96%;              /* light_cyan 700 */
+    --muted-foreground: 210 15% 40%;    /* gunmetal lighter */
 
-    /* Accent - Muted Teal */
-    --accent: 175 50% 30%;              /* Muted teal accent */
-    --accent-foreground: 0 0% 98%;      /* Off-white text on teal */
-    --accent-glow: 175 50% 40%;         /* Lighter teal */
+    /* Accent - Burnt Sienna */
+    --accent: 11 85% 62%;               /* burnt_sienna 500 */
+    --accent-foreground: 194 100% 99%;  /* light_cyan 900 */
+    --accent-hover: 11 85% 72%;         /* burnt_sienna 600 */
 
     /* Success - Muted Green */
-    --success: 140 40% 35%;             /* Muted success green */
-    --success-foreground: 0 0% 98%;
+    --success: 140 40% 35%;
+    --success-foreground: 194 100% 99%;
 
-    /* Warning - Warm Amber */
-    --warning: 35 80% 50%;              /* Warm amber */
-    --warning-foreground: 210 15% 15%;
+    /* Warning - Burnt Sienna lighter */
+    --warning: 11 85% 72%;
+    --warning-foreground: 210 20% 20%;
 
-    /* Error - Muted Red */
-    --destructive: 355 60% 45%;         /* Muted red */
-    --destructive-foreground: 0 0% 98%;
+    /* Error - Burnt Sienna darker */
+    --destructive: 11 85% 52%;
+    --destructive-foreground: 194 100% 99%;
 
     /* Interactive Elements */
-    --border: 40 15% 85%;               /* Subtle warm border */
-    --input: 40 15% 85%;                /* Input borders */
-    --ring: 215 85% 25%;                /* Focus ring color */
+    --border: 203 47% 85%;              /* powder_blue 700 */
+    --input: 203 47% 85%;               /* powder_blue 700 */
+    --ring: 216 35% 36%;                /* yinmn_blue 500 */
 
     /* Solid Colors - No Gradients */
-    --gradient-primary: hsl(215 85% 25%);
-    --gradient-accent: hsl(175 50% 30%);
-    --gradient-hero: hsl(215 85% 25%);
-    --gradient-surface: hsl(45 20% 97%);
-    --gradient-subtle: hsl(40 25% 95%);
+    --gradient-primary: hsl(216 35% 36%);
+    --gradient-accent: hsl(11 85% 62%);
+    --gradient-hero: hsl(216 35% 36%);
+    --gradient-surface: hsl(194 100% 99%);
+    --gradient-subtle: hsl(194 100% 96%);
 
     /* Shadows - Professional & Subtle */
     --shadow-subtle: 0 1px 3px hsla(210, 12%, 20%, 0.1);
