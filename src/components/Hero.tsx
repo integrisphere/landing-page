@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Globe, Brain, Shield, TrendingUp } from "lucide-react";
-import heroImage from "@/assets/hero-industrial.jpg";
+import heroImage from "@/assets/hero-industrial-warm.jpg";
 
 const Hero = () => {
   const features = [
@@ -36,7 +36,7 @@ const Hero = () => {
           alt="Industrial pipeline infrastructure" 
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-primary/70"></div>
+        <div className="absolute inset-0 bg-gunmetal-500/75"></div>
       </div>
 
       {/* Content */}
@@ -51,7 +51,7 @@ const Hero = () => {
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold leading-tight text-white">
               Empowering Global
-              <span className="block font-bold text-accent-glow mt-4">Asset Integrity</span>
+              <span className="block font-bold text-burnt_sienna-500 mt-4">Asset Integrity</span>
               <span className="block text-4xl md:text-5xl lg:text-6xl font-medium text-white/90 mt-6">
                 Through Engineering Excellence
               </span>
@@ -84,7 +84,7 @@ const Hero = () => {
                 className="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-8 shadow-subtle hover:shadow-medium transition-all duration-500 animate-fade-in"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <feature.icon className="h-12 w-12 text-accent-glow mb-6 group-hover:text-white transition-colors duration-300" />
+                <feature.icon className="h-12 w-12 text-burnt_sienna-500 mb-6 group-hover:text-white transition-colors duration-300" />
                 <h3 className="font-semibold text-xl mb-4 text-white">{feature.title}</h3>
                 <p className="text-white/80 text-base leading-relaxed">{feature.description}</p>
               </div>

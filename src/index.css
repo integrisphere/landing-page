@@ -8,14 +8,14 @@ Clean design, excellent readability, WCAG AA compliant colors
 
 @layer base {
   :root {
-    /* Foundation - Light backgrounds */
-    --background: 194 100% 99%;         /* light_cyan 900 */
+    /* Foundation - Off-white backgrounds */
+    --background: 220 14% 96%;          /* Off-white gray-100 */
     --foreground: 210 20% 20%;          /* gunmetal 500 */
 
-    --card: 194 100% 98%;               /* light_cyan 800 */
+    --card: 220 14% 98%;                /* Lighter card background */
     --card-foreground: 210 20% 20%;     /* gunmetal 500 */
 
-    --popover: 194 100% 98%;
+    --popover: 220 14% 98%;
     --popover-foreground: 210 20% 20%;
 
     /* Primary - Yinmn Blue */
@@ -28,7 +28,7 @@ Clean design, excellent readability, WCAG AA compliant colors
     --secondary-foreground: 210 20% 20%; /* gunmetal 500 */
 
     /* Muted - Light backgrounds */
-    --muted: 194 100% 96%;              /* light_cyan 700 */
+    --muted: 220 14% 93%;               /* Subtle gray */
     --muted-foreground: 210 15% 40%;    /* gunmetal lighter */
 
     /* Accent - Burnt Sienna */
