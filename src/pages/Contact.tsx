@@ -381,7 +381,7 @@ const Contact = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <Phone className="h-5 w-5 text-accent" />
-                    <span>+1 (403) 555-0123 (Global HQ)</span>
+                    <span>+14034371609</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Clock className="h-5 w-5 text-accent" />
