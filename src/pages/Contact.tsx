@@ -86,7 +86,7 @@ const Contact = () => {
       primary: true,
       address: "Suite 200, 1234 Industrial Blvd",
       postal: "Calgary, AB T2E 7H1",
-      phone: "+1 (403) 555-0123",
+      phone: "+14034371609",
       email: "calgary@integrisphere.com",
       timezone: "MST (UTC-7)",
     },
@@ -547,7 +547,7 @@ const Contact = () => {
                     </span>
                   </div>
                   <p className="text-muted-foreground">
-                    contact@integrisphere.com
+                    info@integrisphere.com
                   </p>
                 </div>
               </div>
