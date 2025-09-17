@@ -22,9 +22,8 @@ const Footer = () => {
 
   const offices = [
     { city: "Calgary", country: "Canada", primary: true },
-    { city: "Jakarta", country: "Indonesia" },
-    { city: "Manila", country: "Philippines" },
-    { city: "Nairobi", country: "Kenya" },
+    { city: "Vancouver", country: "Canada" },
+    { city: "Houston", country: "USA" },
   ];
 
   return (

@@ -50,7 +50,7 @@ const About = () => {
     {
       number: "4",
       label: "Global Offices",
-      sublabel: "Canada, Indonesia, Philippines, Kenya",
+      sublabel: "Canada, USA",
     },
     { number: "50+", label: "Years Combined", sublabel: "Industry Experience" },
     {

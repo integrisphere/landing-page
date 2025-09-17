@@ -93,31 +93,22 @@ const Contact = () => {
       timezone: "MST (UTC-7)",
     },
     {
-      city: "Jakarta",
-      country: "Indonesia",
-      address: "Menara Sudirman, 23rd Floor",
-      postal: "Jakarta 12190, Indonesia",
-      phone: "+62 21 555-0123",
-      email: "jakarta@integrisphere.com",
-      timezone: "WIB (UTC+7)",
+      city: "Vancouver",
+      country: "Canada",
+      address: "Harbour Centre, 555 W Hastings St",
+      postal: "Vancouver, BC V6B 4N6",
+      phone: "+1 (604) 555-0199",
+      email: "vancouver@integrisphere.com",
+      timezone: "PST (UTC-8)",
     },
     {
-      city: "Manila",
-      country: "Philippines",
-      address: "BGC Central Plaza, 15th Floor",
-      postal: "Taguig City 1630, Philippines",
-      phone: "+63 2 555-0123",
-      email: "manila@integrisphere.com",
-      timezone: "PHT (UTC+8)",
-    },
-    {
-      city: "Nairobi",
-      country: "Kenya",
-      address: "Westlands Business Park",
-      postal: "Nairobi 00100, Kenya",
-      phone: "+254 20 555-0123",
-      email: "nairobi@integrisphere.com",
-      timezone: "EAT (UTC+3)",
+      city: "Houston",
+      country: "USA",
+      address: "Energy Tower, 11700 Katy Fwy, Suite 400",
+      postal: "Houston, TX 77079",
+      phone: "+1 (713) 555-0147",
+      email: "houston@integrisphere.com",
+      timezone: "CST (UTC-6)",
     },
   ];
 
@@ -459,7 +450,7 @@ const Contact = () => {
 
           <div className="max-w-2xl mx-auto">
             <div className="bg-card rounded-lg p-8 shadow-medium border border-border text-center">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
                   <MapPin className="h-8 w-8 text-accent mx-auto mb-2" />
                   <h3 className="font-semibold text-foreground">Calgary</h3>
@@ -467,18 +458,13 @@ const Contact = () => {
                 </div>
                 <div className="text-center">
                   <MapPin className="h-8 w-8 text-accent mx-auto mb-2" />
-                  <h3 className="font-semibold text-foreground">Jakarta</h3>
-                  <p className="text-sm text-muted-foreground">Indonesia</p>
+                  <h3 className="font-semibold text-foreground">Vancouver</h3>
+                  <p className="text-sm text-muted-foreground">Canada</p>
                 </div>
                 <div className="text-center">
                   <MapPin className="h-8 w-8 text-accent mx-auto mb-2" />
-                  <h3 className="font-semibold text-foreground">Manila</h3>
-                  <p className="text-sm text-muted-foreground">Philippines</p>
-                </div>
-                <div className="text-center">
-                  <MapPin className="h-8 w-8 text-accent mx-auto mb-2" />
-                  <h3 className="font-semibold text-foreground">Nairobi</h3>
-                  <p className="text-sm text-muted-foreground">Kenya</p>
+                  <h3 className="font-semibold text-foreground">Houston</h3>
+                  <p className="text-sm text-muted-foreground">USA</p>
                 </div>
               </div>
 
