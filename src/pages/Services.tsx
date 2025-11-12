@@ -13,6 +13,7 @@ import {
   Zap,
   BarChart3,
   Eye,
+  Truck,
 } from "lucide-react";
 import servicesHero from "@/assets/services-hero.jpg";
 
@@ -79,6 +80,28 @@ const Services = () => {
         "Extended equipment life",
         "Boosted efficiency",
         "Dramatically reduced fuel consumption",
+      ],
+    },
+    {
+      id: "logistics",
+      icon: Truck,
+      title: "Logistics Intelligence & Optimization",
+      description:
+        "Transforming logistics into an intelligent, predictive, and optimized ecosystem.",
+      features: [
+        "Fleet Optimization & Routing AI: Dynamic routing to minimize fuel, idle time, and downtime, with driver analytics for safety and compliance.",
+        "Predictive Maintenance for Fleet: AI-based health modeling to move from reactive to preventive maintenance, cutting breakdowns and costs.",
+        "Smart Warehouse & Inventory Analytics: AI, IoT, and computer vision for real-time stock monitoring and layout optimization.",
+        "Contract & Pricing Intelligence: NLP-based platform to audit agreements, eliminate revenue leakage, and simulate new contract terms.",
+        "Tender & Market Intelligence: AI-powered scanning of procurement portals for upcoming tenders, with predictive bid success scoring.",
+        "Integrated Logistics Dashboards: Unified, real-time executive dashboards for confident, evidence-based decision-making.",
+      ],
+      aiIntegration:
+        "Our logistics platforms integrate data from telematics, GPS, and enterprise systems to continuously learn and adapt. We deliver faster decisions, lower costs, and higher reliability across the supply chain, turning complex data into measurable value.",
+      benefits: [
+        "8–10% fuel savings",
+        "10–15% higher asset utilization",
+        "2–3% revenue recovery",
       ],
     },
     {

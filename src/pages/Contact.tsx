@@ -102,13 +102,13 @@ const Contact = () => {
       timezone: "PST (UTC-8)",
     },
     {
-      city: "Houston",
-      country: "USA",
-      address: "Energy Tower, 11700 Katy Fwy, Suite 400",
-      postal: "Houston, TX 77079",
-      phone: "+1 (713) 555-0147",
-      email: "houston@integrisphere.com",
-      timezone: "CST (UTC-6)",
+      city: "Oman",
+      country: "OM",
+      address: "Office Address, Muscat",
+      postal: "Postal Code",
+      phone: "+968 1234 5678",
+      email: "oman@integrisphere.com",
+      timezone: "GST (UTC+4)",
     },
   ];
 
@@ -324,6 +324,9 @@ const Contact = () => {
                     <option value="Boiler and Heat Recovery Systems">
                       Boiler and Heat Recovery Systems
                     </option>
+                    <option value="Logistics Intelligence & Optimization">
+                      Logistics Intelligence & Optimization
+                    </option>
                     <option value="Drone Inspections & CUI Detection">
                       Drone Inspections & CUI Detection
                     </option>
@@ -463,8 +466,8 @@ const Contact = () => {
                 </div>
                 <div className="text-center">
                   <MapPin className="h-8 w-8 text-accent mx-auto mb-2" />
-                  <h3 className="font-semibold text-foreground">Houston</h3>
-                  <p className="text-sm text-muted-foreground">USA</p>
+                  <h3 className="font-semibold text-foreground">Oman</h3>
+                  <p className="text-sm text-muted-foreground">OM</p>
                 </div>
               </div>
 

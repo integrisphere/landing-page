@@ -23,7 +23,7 @@ const Footer = () => {
   const offices = [
     { city: "Calgary", country: "Canada", primary: true },
     { city: "Vancouver", country: "Canada" },
-    { city: "Houston", country: "USA" },
+    { city: "Oman", country: "OM" },
   ];
 
   return (
