@@ -8,7 +8,7 @@ const Hero = () => {
     {
       icon: Globe,
       title: "Global Reach",
-      description: "Serving Canada, Indonesia, Philippines, and Africa"
+      description: "Delivering services across Canada and the GCC—Oman and Saudi Arabia—while entering the U.S. market."
     },
     {
       icon: Brain,
